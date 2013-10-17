@@ -3,3 +3,4 @@ logs/*
 *.sublime-project
 *.DS_STORE
 *.sublime-workspace
+node_modules
