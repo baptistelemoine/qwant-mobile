@@ -1,11 +1,15 @@
 'use strict';
 
-/* Controllers */
+app.controllers.controller('SearchController',['$scope','SearchManager', function ($scope, SearchManager){
 
-var controllers = angular.module('qwant.controllers', []);
+	$scope.items = [];
 
-controllers.controller('TestController', ['$scope','SearchManager', function ($scope, SearchManager){
-
-	$scope.val = SearchManager.toto;
-
+	$scope.launchSearch = function(){
+		var request = SearchManager.search($scope.term);
+		request.then(function (response){
+			angular.forEach(response.data.items, function(value, key){
+				$scope.items.push(value);
+			});
+		});
+	};
 }]);

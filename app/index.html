@@ -6,10 +6,13 @@
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
-  <div ng-controller="TestController">
-    <p>{{val}}</p>
+  <div ng-controller="SearchController">
+    <input type="text" ng-model="term"></input><button ng-click="launchSearch()">valider</button>
+    <div ng-repeat="item in items">
+      <p>{{item.title}}</p>
+    </div>
   </div>
-  <div ng-view></div>
+  <!-- <div ng-view></div> -->
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>

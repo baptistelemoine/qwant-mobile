@@ -2,13 +2,9 @@
 
 app.services.factory('SearchManager', ['$http', 'ConfigManager', function ($http, ConfigManager){
 	return {
-		toto:ConfigManager.searchUrl,
+		url:ConfigManager.searchUrl,
 		search:function(term){
-			return $http('GET', url, post, function(status, response){
-				// success
-			}, function(status, response){
-				// error
-			});
+			return $http({method:'GET', cache:true, url:this.url, params:{q:term}});
 		}
 	};
 }]);
