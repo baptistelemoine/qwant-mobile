@@ -6,7 +6,8 @@ var app = angular.module('qwant', [
   'qwant.filters',
   'qwant.services',
   'qwant.directives',
-  'qwant.controllers'
+  'qwant.controllers',
+  'ngSanitize'
 ]).
 config(['$routeProvider', function($routeProvider) {
   /*$routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
