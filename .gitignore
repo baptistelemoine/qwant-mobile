@@ -4,3 +4,4 @@ logs/*
 *.DS_STORE
 *.sublime-workspace
 node_modules
+app/lib/vendor
