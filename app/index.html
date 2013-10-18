@@ -8,7 +8,7 @@
 <body>
   <div ng-controller="SearchController">
     <input type="text" ng-model="term"></input><button ng-click="search.nextPage(term)">valider</button>
-    <div infinite-scroll="search.nextPage(term)" infinite-scroll-distance="0" infinite-scroll-immediate-check="false">
+    <div infinite-scroll="search.nextPage(term)" infinite-scroll-disabled="true" infinite-scroll-distance="0" infinite-scroll-immediate-check="false">
       <div ng-repeat="item in search.items">
         <!-- <p>{{item.title}}</p> -->
         <p ng-bind-html="item.title"></p>
