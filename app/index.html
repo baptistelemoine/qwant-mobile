@@ -7,11 +7,12 @@
 </head>
 <body>
   <div ng-controller="SearchController">
-    <input type="text" ng-model="term"></input><button ng-click="launchSearch()">valider</button>
-    <div ng-repeat="item in items">
+    <input type="text" ng-model="term"></input><button ng-click="search.nextPage(term)">valider</button>
+    <div ng-repeat="item in search.items">
       <!-- <p>{{item.title}}</p> -->
       <p ng-bind-html="item.title"></p>
     </div>
+    <p ng-show="search.busy">Loading</p>
   </div>
   <!-- <div ng-view></div> -->
 
