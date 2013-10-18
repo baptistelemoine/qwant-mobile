@@ -4,7 +4,7 @@ app.services.factory('SearchManager', ['$http', 'ConfigManager', function ($http
 	
 	return {
 		
-		items:[],		
+		items:[],
 		url:ConfigManager.searchUrl,
 		busy:false,
 		term:'',
@@ -14,9 +14,15 @@ app.services.factory('SearchManager', ['$http', 'ConfigManager', function ($http
 		nextPage:function(term){
 			
 			var self = this;
-
+			
+			if (this.busy) return;
 			this.busy = true;
-			if(this.term !== term) this.items = [];
+
+			//new search ? reset all
+			if(this.term !== term) {
+				this.items = [];
+				this.currentPage = 0;
+			}
 
 			var offset = this.currentPage > 0 ? this.currentPage * this.perPage : 0;
 
@@ -25,9 +31,9 @@ app.services.factory('SearchManager', ['$http', 'ConfigManager', function ($http
 				angular.forEach(data.items, function (value, key){
 					self.items.push(value);
 				});
-				self.busy = false;
 				self.term = term;
 				self.currentPage++;
+				self.busy = false;
 			});
 		}
 	};

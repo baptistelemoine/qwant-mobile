@@ -7,7 +7,8 @@ var app = angular.module('qwant', [
   'qwant.services',
   'qwant.directives',
   'qwant.controllers',
-  'ngSanitize'
+  'ngSanitize',
+  'infinite-scroll'
 ]).
 config(['$routeProvider', function($routeProvider) {
   /*$routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
