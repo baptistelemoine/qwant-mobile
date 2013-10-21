@@ -6,17 +6,7 @@
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
-  <div ng-controller="SearchController">
-    <input type="text" ng-model="term"></input><button ng-click="search.nextPage(term)">valider</button>
-    <div infinite-scroll="search.nextPage(term)" infinite-scroll-disabled="true" infinite-scroll-distance="0" infinite-scroll-immediate-check="false">
-      <div ng-repeat="item in search.items">
-        <!-- <p>{{item.title}}</p> -->
-        <p ng-bind-html="item.title"></p>
-      </div>
-    </div>
-    <p ng-show="search.busy">Loading</p>
-  </div>
-  <!-- <div ng-view></div> -->
+  <div ng-view></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
@@ -29,7 +19,7 @@
   <script src="lib/vendor/ngInfiniteScroll/ng-infinite-scroll.js"></script>
   <script src="js/services/ConfigManager.js"></script>
   <script src="js/services/SearchManager.js"></script>
-  <script src="js/controllers/controllers.js"></script>
+  <script src="js/controllers/SearchController.js"></script>
   <script src="js/filters/filters.js"></script>
   <script src="js/directives/directives.js"></script>
 </body>
