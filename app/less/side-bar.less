@@ -1,0 +1,41 @@
+
+.list-group{
+
+	.list-group-item{
+		background: none;
+		border: 0;
+		border-radius: 0;
+		border-bottom: 1px solid #333;
+		color: white;
+
+		.badge{
+			background-color: @blue-qwant;
+		}
+
+		.list-group-item-heading{
+			color: white;
+			width: 85%
+		}
+		.list-group-item-text{
+			font-size: @font-size-small;
+			opacity: .5;
+		}
+		&:hover, &:active{
+			background-color: @blue-qwant;
+			
+			.badge{
+				background-color: white;
+				color: @blue-qwant;
+			}
+		}
+	}
+	
+}
+
+.snap-drawer-left{
+	color:white;
+}
+
+.user-info{
+	height: 45px;
+}

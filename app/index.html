@@ -10,18 +10,28 @@
 <body>
   <div snap-drawers>
     <div snap-drawer>
-      <ul>
-        <li>Item A</li>
-        <li>Item A</li>
-        <li>Item A</li>
-        <li>Item A</li>
-      </ul>
+      <div class="user-info"></div>
+      <div class="list-group">
+        <a class="list-group-item">
+          <h4 class="list-group-item-heading">First section</h4>
+          <p class="list-group-item-text">Gérez votre compte dans cette section super cool</p>
+        </a>
+        <a class="list-group-item">
+          <span class="badge">14</span>
+          <h4 class="list-group-item-heading">Second section</h4>          
+          <p class="list-group-item-text">Another section description</p>
+        </a>
+        <a class="list-group-item">
+          <h4 class="list-group-item-heading">Third section</h4>
+          <p class="list-group-item-text">Last description</p>
+        </a>
+      </div>
     </div>
   </div>
   <div snap-content>
     <div class="header navbar-fixed-top">
       <!-- <div class="rounded-btn"><span class="icon-menu"></span></div> -->
-      <span class="icon-menu-1"></span>
+      <span class="icon-menu-1" snap-toggle="left"></span>
     </div>
     <div id="main">
       <div id="homeLogo"></div>

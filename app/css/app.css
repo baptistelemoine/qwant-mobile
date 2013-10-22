@@ -28,6 +28,7 @@ html {
 }
 .searchbox-container > .col-xs-3 {
   padding-left: 0;
+  text-align: right;
 }
 .searchbox-container input.searchbox,
 .searchbox-container .icon-search {
@@ -38,6 +39,8 @@ html {
   font-size: 17px;
   background: white;
   border: 1px solid #eee;
+  outline: none;
+  box-shadow: none !important;
 }
 .searchbox-container input.searchbox {
   border-right-width: 0;
@@ -136,4 +139,36 @@ html {
 .icon-menu:before {
   content: '\e800';
 }
-/* '' */
+/* '' */.list-group .list-group-item {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #333;
+  color: white;
+}
+.list-group .list-group-item .badge {
+  background-color: #2489c5;
+}
+.list-group .list-group-item .list-group-item-heading {
+  color: white;
+  width: 85%;
+}
+.list-group .list-group-item .list-group-item-text {
+  font-size: 11.9px;
+  opacity: .5;
+}
+.list-group .list-group-item:hover,
+.list-group .list-group-item:active {
+  background-color: #2489c5;
+}
+.list-group .list-group-item:hover .badge,
+.list-group .list-group-item:active .badge {
+  background-color: white;
+  color: #2489c5;
+}
+.snap-drawer-left {
+  color: white;
+}
+.user-info {
+  height: 45px;
+}
