@@ -1,3 +1,7 @@
-# ready to go
+# Qwant mobile app
 
-from angular-seed project
+git clone
+run npm install
+run bower install
+
+for get all dependencies
