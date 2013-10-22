@@ -146,6 +146,9 @@ html {
   border-bottom: 1px solid #333;
   color: white;
 }
+.list-group .list-group-item h4 {
+  font-size: 16px;
+}
 .list-group .list-group-item .badge {
   background-color: #2489c5;
 }
@@ -170,5 +173,10 @@ html {
   color: white;
 }
 .user-info {
-  height: 45px;
+  padding: 20px;
+  height: 90px;
+}
+.user-info img.img-circle {
+  width: 50px;
+  height: 50px;
 }
