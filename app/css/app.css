@@ -1,8 +1,139 @@
 @import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
 body,
 html {
-  font-family: "Helvetica Neue", "Arimo", Helvetica, Arial, sans-serif;
+  background-color: #232323;
+}
+#main {
+  margin-top: 50px;
+  padding: 10px;
+}
+#homeLogo {
+  margin-top: 35px;
+  background: url("/img/logocouleur.png") no-repeat center center;
+  background-size: 262px 75px;
+  height: 100px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  #homeLogo {
+    background-image: url("/img/logocouleur@2x.png");
+  }
+}
+.searchbox-container {
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
+.searchbox-container > .col-xs-9 {
+  padding-right: 0;
+}
+.searchbox-container > .col-xs-3 {
+  padding-left: 0;
+}
+.searchbox-container input.searchbox,
+.searchbox-container .icon-search {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 25px;
+  padding: 0 15px 2px;
+  font-size: 17px;
+  background: white;
+  border: 1px solid #eee;
+}
+.searchbox-container input.searchbox {
+  border-right-width: 0;
+}
+.searchbox-container .icon-search {
+  border-left-width: 0;
+  padding-top: 10px;
+  color: #666;
+}
+.snap-drawer {
+  background-color: #232323;
 }
 .snap-content {
-  background-color: #eee;
+  background-color: white;
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.5);
 }
+.header {
+  height: 45px;
+  background-color: #2489c5;
+  padding: 8px;
+}
+.header .rounded-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 3px;
+}
+.header .rounded-btn > [class^="icon-"] {
+  color: white;
+  font-size: 16px;
+}
+.header > [class^="icon-"] {
+  color: #fff;
+  font-size: 20px;
+}
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?82202619');
+  src: url('../font/fontello.eot?82202619#iefix') format('embedded-opentype'), url('../font/fontello.woff?82202619') format('woff'), url('../font/fontello.ttf?82202619') format('truetype'), url('../font/fontello.svg?82202619#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?82202619#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+
+  /* remove if not needed */
+
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+
+  /* font-size: 120%; */
+
+  /* Uncomment for 3D effect */
+
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+}
+.icon-search:before {
+  content: '\e802';
+}
+/* '' */
+.icon-menu-1:before {
+  content: '\e801';
+}
+/* '' */
+.icon-menu:before {
+  content: '\e800';
+}
+/* '' */
