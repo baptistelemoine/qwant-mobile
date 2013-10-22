@@ -8,7 +8,8 @@ var app = angular.module('qwant', [
   'qwant.directives',
   'qwant.controllers',
   'ngSanitize',
-  'infinite-scroll'
+  'infinite-scroll',
+  'snap'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/search', {templateUrl: 'partials/searchResult.html', controller: 'SearchController'});

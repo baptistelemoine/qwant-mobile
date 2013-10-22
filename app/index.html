@@ -3,10 +3,24 @@
 <head>
   <meta charset="utf-8">
   <title>Qwant - Mobile</title>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
   <link rel="stylesheet" href="css/app.css"/>
   <link rel="stylesheet" href="lib/vendor/angular-snap/angular-snap.css"/>
 </head>
 <body>
+  <div snap-drawers>
+    <div snap-drawer>
+      <ul>
+        <li>Item A</li>
+        <li>Item A</li>
+        <li>Item A</li>
+        <li>Item A</li>
+      </ul>
+    </div>
+  </div>
+  <div snap-content>
+    <p>Content goes here</p>
+  </div>
   <div ng-view></div>
 
   <!-- In production use:
