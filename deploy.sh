@@ -10,6 +10,8 @@ git push origin master
 git checkout prod
 #copy files from master branch
 git show master:app/dist/app.min.js > app/js/app.min.js
+git show master:app/dist/angular-modules.min.js > app/js/angular-modules.min.js
+git show master:app/dist/vendor.min.js > app/js/vendor.min.js
 git show master:app/dist/app-min.css > app/css/app-min.css
 #commit changes on production branch
 git add -A
