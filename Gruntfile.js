@@ -33,6 +33,17 @@ module.exports = function (grunt){
 					'app/dist/app.min.js': ['app/dist/built.js']
 				}
 			}
+		},
+		cssmin:{
+			with_banner:{
+				options:{
+					banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+					'<%= grunt.template.today("yyyy-mm-dd") %> */'
+				},
+				files:{
+					'app/dist/app-min.css':['app/css/app.css', 'app/css/fontello.css']
+				}
+			}
 		}
 
 	});
@@ -41,7 +52,8 @@ module.exports = function (grunt){
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-	grunt.registerTask('dist', ['concat:dist', 'uglify:dist']);
+	grunt.registerTask('dist', ['concat:dist', 'uglify:dist', 'cssmin']);
 
 };
