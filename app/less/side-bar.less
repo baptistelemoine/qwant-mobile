@@ -16,19 +16,35 @@
 
 		.list-group-item-heading{
 			color: white;
-			width: 85%
 		}
 		.list-group-item-text{
 			font-size: @font-size-small;
 			opacity: .5;
 		}
 		&:hover, &:active{
-			background-color: @blue-qwant;
+			// background-color: @blue-qwant;
+			background: none;
 			
 			.badge{
 				background-color: white;
 				color: @blue-qwant;
 			}
+		}
+		[class^="icon"]{
+			opacity: .5;
+			margin-right: 10px;
+		}
+
+		ul{
+		 	list-style: none;
+		 	padding-left: 30px;
+		 	margin-top: 20px;
+		 	margin-bottom: 20px;
+		}
+
+		ul li{
+			opacity: .7;
+			margin-bottom: 5px;
 		}
 	}
 	
@@ -41,6 +57,15 @@
 .user-info{
 	padding: 20px;
 	height: 90px;
+
+	h4{
+		font-size: 16px;
+		margin-bottom: 5px;
+	}
+	p{
+		opacity: .5;
+		font-size: 12px;
+	}
 
 	img.img-circle{
 		width: 50px;

@@ -4,28 +4,59 @@
   <meta charset="utf-8">
   <title>Qwant - Mobile</title>
   <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/fontello.css"/>
   <link rel="stylesheet" href="css/app.css"/>
   <link rel="stylesheet" href="lib/vendor/angular-snap/angular-snap.css"/>
 </head>
 <body>
   <div snap-drawers>
     <div snap-drawer>
-      <div class="user-info">
-        <img src="img/baptiste.jpeg" class="img-circle">
+      <div class="row user-info">
+        <div class="col-xs-3">
+          <img src="img/baptiste.jpeg" class="img-circle">
+        </div>
+        <div class="col-xs-9">
+          <h4>Baptiste Lemoine</h4>
+          <p>baptiste.lemoine@gmail.com</p>
+        </div>
       </div>
       <div class="list-group">
-        <a class="list-group-item">
+        <div class="list-group-item">          
+          <span class="icon-menu-1 pull-left"></span>
           <h4 class="list-group-item-heading">Recherche</h4>
-          <p class="list-group-item-text">Mettre un sous menu avec chekbox pour choisir ses dossiers</p>
-        </a>
-        <a class="list-group-item">
+            <label class="checkbox inline">
+              <input type="checkbox" checked value="web" onclick="null" /> 
+              <div class="regular-checkbox dark green"></div>
+              <span>Web</span>
+            </label>
+            <label class="checkbox inline">
+              <input type="checkbox" checked value="web" onclick="null" /> 
+              <div class="regular-checkbox dark orange"></div>
+              <span>Actualités</span>
+            </label>
+            <label class="checkbox inline">
+              <input type="checkbox" checked value="web" onclick="null" /> 
+              <div class="regular-checkbox dark blue"></div>
+              <span>Social</span>
+            </label>
+            <label class="checkbox inline">
+              <input type="checkbox" checked value="web" onclick="null" /> 
+              <div class="regular-checkbox dark purple"></div>
+              <span>Shopping</span>
+            </label>
+        </div>
+        <!-- <a class="list-group-item">
           <span class="badge">14</span>
           <h4 class="list-group-item-heading">Paramètres</h4>          
           <p class="list-group-item-text">Se connecter et changer la langue</p>
+        </a> -->
+        <a class="list-group-item">          
+          <span class="icon-menu-1 pull-left"></span>
+          <h4 class="list-group-item-heading">Paramètres</h4>
         </a>
-        <a class="list-group-item">
+        <a class="list-group-item">          
+          <span class="icon-menu-1 pull-left"></span>
           <h4 class="list-group-item-heading">Qwant</h4>
-          <p class="list-group-item-text">Contact et tout le reste</p>
         </a>
       </div>
     </div>
