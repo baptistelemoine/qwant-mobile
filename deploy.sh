@@ -9,7 +9,7 @@ git push origin master
 #change branch
 git checkout prod
 #copy files from master branch
-git show master:app/dist/app-min.js > app/js/app-min.js
+git show master:app/dist/app.min.js > app/js/app.min.js
 git show master:app/dist/app-min.css > app/css/app-min.css
 #commit changes on production branch
 git add -A
