@@ -83,8 +83,6 @@ h6,
   width: 1px;
   opacity: .5;
   height: 45px;
-  position: absolute;
-  margin-left: 100%;
 }
 .header [class^="icon-"] {
   color: #fff;
@@ -131,6 +129,7 @@ h6,
   margin-top: -2px;
 }
 .list-group .list-group-item ul {
+  display: none;
   list-style: none;
   padding-left: 30px;
   margin-top: 20px;
@@ -138,7 +137,7 @@ h6,
 }
 .list-group .list-group-item ul li {
   opacity: .7;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .snap-drawer-left {
   color: white;
@@ -147,6 +146,7 @@ h6,
   padding: 20px;
   height: 90px;
   background-color: #272727;
+  margin-right: 0;
 }
 .user-info [class^="col-xs"] {
   padding-left: 5px;
