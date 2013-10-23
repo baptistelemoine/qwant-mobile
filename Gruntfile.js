@@ -19,8 +19,11 @@ module.exports = function (grunt){
 				'<%= grunt.template.today("yyyy-mm-dd") %> */',
 			},
 			dist: {
-				src: ['app/js/**/*.js'],
-				dest: 'app/dist/built.js',
+				files: {
+					'app/dist/built.js' :['app/js/**/*.js'],
+					'app/dist/angular-modules.min.js' : ['app/lib/angular/angular-route.min.js', 'app/lib/angular/angular-sanitize.min.js'],
+					'app/dist/vendor.min.js' : ['app/lib/vendor/angular-snap/angular-snap.min.js', 'app/lib/vendor/ngInfiniteScroll/ng-infinite-scroll.min.js', 'app/lib/vendor/snapjs/snap.min.js']
+				}
 			},
 		},
 		uglify: {
@@ -30,6 +33,7 @@ module.exports = function (grunt){
 			},
 			dist: {
 				files: {
+					'app/lib/vendor/ngInfiniteScroll/ng-infinite-scroll.min.js':['app/lib/vendor/ngInfiniteScroll/ng-infinite-scroll.js'],
 					'app/dist/app.min.js': ['app/dist/built.js']
 				}
 			}
