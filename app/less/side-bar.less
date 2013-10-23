@@ -7,6 +7,13 @@
 		border-radius: 0;
 		border-bottom: 1px solid #333;
 		color: white;
+		margin-top: 5px;
+
+		&:first-child{
+			border-top: 1px solid #333;
+			margin-top: 0;
+			padding-top: 15px;
+		}
 
 		h4{ font-size: 16px;}
 
@@ -33,6 +40,7 @@
 		[class^="icon"]{
 			opacity: .5;
 			margin-right: 10px;
+			margin-top: -2px;
 		}
 
 		ul{
@@ -57,6 +65,12 @@
 .user-info{
 	padding: 20px;
 	height: 90px;
+	// background-color: #1c1c1c;
+	background-color: #272727;
+
+	[class^="col-xs"]{
+		padding-left: 5px;
+	}
 
 	h4{
 		font-size: 16px;

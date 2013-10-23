@@ -3,6 +3,7 @@ body,
 html {
   font-family: "Helvetica Neue", "Arimo", Helvetica, Arial, sans-serif;
   background-color: #232323;
+  font-weight: 400;
 }
 h1,
 h2,
@@ -17,6 +18,7 @@ h6,
 .h5,
 .h6 {
   font-family: "Helvetica Neue", "Arimo", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 #main {
   margin-top: 50px;
@@ -77,18 +79,14 @@ h6,
   background-color: #2489c5;
   padding: 8px;
 }
-.header .rounded-btn {
-  width: 30px;
-  height: 30px;
-  border: 1px solid white;
-  border-radius: 20px;
-  padding: 3px;
+.header .divider {
+  width: 1px;
+  opacity: .5;
+  height: 45px;
+  position: absolute;
+  margin-left: 100%;
 }
-.header .rounded-btn > [class^="icon-"] {
-  color: white;
-  font-size: 16px;
-}
-.header > [class^="icon-"] {
+.header [class^="icon-"] {
   color: #fff;
   font-size: 20px;
 }
@@ -98,6 +96,12 @@ h6,
   border-radius: 0;
   border-bottom: 1px solid #333;
   color: white;
+  margin-top: 5px;
+}
+.list-group .list-group-item:first-child {
+  border-top: 1px solid #333;
+  margin-top: 0;
+  padding-top: 15px;
 }
 .list-group .list-group-item h4 {
   font-size: 16px;
@@ -124,6 +128,7 @@ h6,
 .list-group .list-group-item [class^="icon"] {
   opacity: .5;
   margin-right: 10px;
+  margin-top: -2px;
 }
 .list-group .list-group-item ul {
   list-style: none;
@@ -141,6 +146,10 @@ h6,
 .user-info {
   padding: 20px;
   height: 90px;
+  background-color: #272727;
+}
+.user-info [class^="col-xs"] {
+  padding-left: 5px;
 }
 .user-info h4 {
   font-size: 16px;
