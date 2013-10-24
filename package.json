@@ -1,6 +1,7 @@
 {
   "name": "qwant-mobile",
   "description": "Qwant mobile web app",
+  "version": "0.0.1",
   "devDependencies": {
     "phantomjs": "*",
     "karma": "*",
