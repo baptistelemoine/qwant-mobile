@@ -26,15 +26,16 @@ h6,
 }
 #homeLogo {
   margin-top: 35px;
-  background: url("/img/logocouleur.png") no-repeat center center;
-  background-size: 262px 75px;
+  background: url("/img/logocouleur@2x.png") no-repeat center center;
+  background-size: 200px 57px;
   height: 100px;
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  #homeLogo {
-    background-image: url("/img/logocouleur@2x.png");
-  }
+/*@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	#homeLogo {
+		background-image: url("/img/logocouleur@2x.png");
+	}
 }
+*/
 .searchbox-container {
   text-align: center;
   padding: 10px;
@@ -247,7 +248,6 @@ snap-drawer,
 }
 label.checkbox {
   padding-left: 0;
-  display: inline-block;
 }
 label.checkbox span {
   margin-left: 40px;
