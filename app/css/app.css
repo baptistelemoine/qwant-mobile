@@ -282,6 +282,7 @@ input[type="checkbox"]:checked + div.regular-checkbox.purple {
   background-color: #6a5a8c;
 }
 input[type="checkbox"]:checked + div.regular-checkbox:after {
+  pointer-events: none;
   font-family: 'fontello';
   font-size: 11px;
   content: '\e803';
