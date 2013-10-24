@@ -257,17 +257,6 @@ label.checkbox span {
 input[type="checkbox"] {
   display: none;
 }
-input[type="checkbox"] {
-  /*&:checked + div.regular-checkbox:after{
-        font-family: @font-family-fontello;
-        font-size: 11px;
-        content: '\e803';
-        color: #fff;
-        margin-left: 4px;
-    }
-*/
-
-}
 input[type="checkbox"] + div.regular-checkbox {
   width: 20px;
   height: 20px;
@@ -291,6 +280,14 @@ input[type="checkbox"]:checked + div.regular-checkbox.orange {
 }
 input[type="checkbox"]:checked + div.regular-checkbox.purple {
   background-color: #6a5a8c;
+}
+input[type="checkbox"]:checked + div.regular-checkbox:after {
+  pointer-events: none;
+  font-family: 'fontello';
+  font-size: 11px;
+  content: '\e803';
+  color: #fff;
+  margin-left: 4px;
 }
 .big-checkbox {
   padding: 18px;
