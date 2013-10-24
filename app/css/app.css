@@ -25,7 +25,7 @@ h6,
   padding: 10px;
 }
 #homeLogo {
-  margin-top: 35px;
+  margin-top: 15px;
   background: url("/img/logocouleur@2x.png") no-repeat center center;
   background-size: 200px 57px;
   height: 100px;
@@ -39,7 +39,7 @@ h6,
 .searchbox-container {
   text-align: center;
   padding: 10px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .searchbox-container > .col-xs-9 {
   padding-right: 0;
