@@ -247,6 +247,7 @@ snap-drawer,
 }
 label.checkbox {
   padding-left: 0;
+  display: inline-block;
 }
 label.checkbox span {
   margin-left: 40px;
