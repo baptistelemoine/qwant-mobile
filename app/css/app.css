@@ -185,6 +185,7 @@ snap-drawer,
 }
 .list-group .list-group-item h4 {
   font-size: 16px;
+  font-weight: 500;
 }
 .list-group .list-group-item .badge {
   background-color: #2489c5;
@@ -235,7 +236,8 @@ snap-drawer,
 }
 .user-info h4 {
   font-size: 16px;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
+  font-weight: 500;
 }
 .user-info p {
   opacity: .5;
@@ -251,13 +253,11 @@ snap-drawer,
 }
 label.checkbox {
   padding-left: 0;
-  display: inline-block;
-  /*span{
-        margin-left: 40px;
-        opacity: .7;
-        font-weight: normal;
-    }
-*/
+}
+label.checkbox span {
+  margin-left: 40px;
+  opacity: .5;
+  font-weight: normal;
 }
 input[type="checkbox"] {
   display: none;
