@@ -251,11 +251,13 @@ snap-drawer,
 }
 label.checkbox {
   padding-left: 0;
-}
-label.checkbox span {
-  margin-left: 40px;
-  opacity: .7;
-  font-weight: normal;
+  display: inline-block;
+  /*span{
+        margin-left: 40px;
+        opacity: .7;
+        font-weight: normal;
+    }
+*/
 }
 input[type="checkbox"] {
   display: none;
