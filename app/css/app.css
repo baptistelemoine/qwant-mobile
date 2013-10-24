@@ -20,6 +20,9 @@ h6,
   font-family: "Helvetica Neue", "Arimo", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
+label > * {
+  pointer-events: none;
+}
 #main {
   margin-top: 50px;
   padding: 10px;
