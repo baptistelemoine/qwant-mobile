@@ -19,7 +19,8 @@ app.configure(function () {
     app.use(express.static(path.join(__dirname, 'app')));
 });
 
-app.listen(3000);
+var port = process.env.PORT || 3000;
+app.listen(port);
 
 var searchRequest = function (request, source, callback){
 	
