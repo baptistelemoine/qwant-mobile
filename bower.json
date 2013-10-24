@@ -19,6 +19,7 @@
   "dependencies": {
     "ngInfiniteScroll": "~1.0.0",
     "jquery": "~2.0.3",
-    "angular-snap": "~1.0.0"
+    "angular-snap": "~1.0.0",
+    "fastclick": "~0.6.10"
   }
 }
