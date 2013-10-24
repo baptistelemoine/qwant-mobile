@@ -44,7 +44,7 @@ var filters = angular.module('qwant.filters', []);
 'use strict';
 
 app.services.value('ConfigManager', {
-		searchUrl:'http://localhost:3000/search'
+		searchUrl:'/search'
 	}
 );
 'use strict'
