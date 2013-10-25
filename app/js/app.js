@@ -19,3 +19,4 @@ config(['$routeProvider', function($routeProvider) {
 
 app.services = angular.module('qwant.services', []);
 app.controllers = angular.module('qwant.controllers', []);
+app.directives = angular.module('qwant.directives', []);
