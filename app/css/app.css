@@ -26,6 +26,9 @@ label > * {
 #main {
   margin-top: 50px;
   padding: 10px;
+  overflow-scrolling: touch;
+  overflow-y: scroll;
+  background-color: #fff;
 }
 #homeLogo {
   margin-top: 15px;
@@ -103,7 +106,7 @@ snap-drawer,
 .snap-drawer,
 .x-snap-drawer,
 .snap-drawer {
-  position: absolute;
+  position: fixed;
   height: auto;
   top: 0;
   bottom: 0;

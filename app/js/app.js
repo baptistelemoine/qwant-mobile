@@ -12,6 +12,7 @@ var app = angular.module('qwant', [
   'snap'
 ]).
 config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/', {templateUrl:'partials/home.html', controller:'HomeController'});
   $routeProvider.when('/search', {templateUrl: 'partials/searchResult.html', controller: 'SearchController'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
