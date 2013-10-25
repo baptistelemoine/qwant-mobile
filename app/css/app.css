@@ -26,8 +26,6 @@ label > * {
 #main {
   margin-top: 50px;
   padding: 10px;
-  overflow-scrolling: touch;
-  overflow-y: scroll;
   background-color: #fff;
 }
 #homeLogo {
