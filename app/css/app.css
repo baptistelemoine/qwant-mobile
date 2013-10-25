@@ -1,80 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
-body,
-html {
-  font-family: "Helvetica Neue", "Arimo", Helvetica, Arial, sans-serif;
-  background-color: #232323;
-  font-weight: 400;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: "Helvetica Neue", "Arimo", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-}
-label > * {
-  pointer-events: none;
-}
-.snap-drawers {
-  height: 100%!important;
-}
-#main {
-  margin-top: 50px;
-  padding: 10px;
-  background-color: #fff;
-}
-#homeLogo {
-  margin-top: 15px;
-  background: url("/img/logocouleur@2x.png") no-repeat center center;
-  background-size: 200px 57px;
-  height: 100px;
-}
-/*@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-	#homeLogo {
-		background-image: url("/img/logocouleur@2x.png");
-	}
-}
-*/
-.searchbox-container {
-  text-align: center;
-  padding: 10px;
-  margin-top: 10px;
-}
-.searchbox-container > .col-xs-9 {
-  padding-right: 0;
-}
-.searchbox-container > .col-xs-3 {
-  padding-left: 0;
-  text-align: right;
-}
-.searchbox-container input.searchbox,
-.searchbox-container .icon-search {
-  width: 100%;
-  height: 50px;
-  margin-bottom: 25px;
-  padding: 0 15px 2px;
-  font-size: 17px;
-  background: white;
-  border: 1px solid #eee;
-  outline: none;
-  box-shadow: none !important;
-}
-.searchbox-container input.searchbox {
-  border-right-width: 0;
-}
-.searchbox-container .icon-search {
-  border-left-width: 0;
-  padding-top: 10px;
-  color: #666;
-}
 snap-content,
 [snap\:content],
 [snap-content],
@@ -160,10 +84,91 @@ snap-drawer,
   background-color: white;
   box-shadow: -10px 0 20px rgba(0, 0, 0, 0.5);
 }
+body,
+html {
+  font-family: "Helvetica Neue", "Arimo", Helvetica, Arial, sans-serif;
+  background-color: #232323;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Helvetica Neue", "Arimo", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+label > * {
+  pointer-events: none;
+}
+.snap-drawers {
+  height: 100%!important;
+  top: 45px;
+}
+#main {
+  margin-top: 50px;
+  padding: 10px;
+  background-color: #fff;
+}
+#homeLogo {
+  margin-top: 15px;
+  background: url("/img/logocouleur@2x.png") no-repeat center center;
+  background-size: 200px 57px;
+  height: 100px;
+}
+/*@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	#homeLogo {
+		background-image: url("/img/logocouleur@2x.png");
+	}
+}
+*/
+.searchbox-container {
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+}
+.searchbox-container > .col-xs-9 {
+  padding-right: 0;
+}
+.searchbox-container > .col-xs-3 {
+  padding-left: 0;
+  text-align: right;
+}
+.searchbox-container input.searchbox,
+.searchbox-container .icon-search {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 25px;
+  padding: 0 15px 2px;
+  font-size: 17px;
+  background: white;
+  border: 1px solid #eee;
+  outline: none;
+  box-shadow: none !important;
+}
+.searchbox-container input.searchbox {
+  border-right-width: 0;
+}
+.searchbox-container .icon-search {
+  border-left-width: 0;
+  padding-top: 10px;
+  color: #666;
+}
 .header {
   height: 45px;
   background-color: #2489c5;
   padding: 8px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 .header .divider {
   width: 1px;
