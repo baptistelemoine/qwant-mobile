@@ -16,80 +16,16 @@
 </head>
 <body>
   <div snap-drawers>
-    <div snap-drawer>
-      <div class="row user-info">
-        <div class="col-xs-3">
-          <img src="img/baptiste.jpeg" class="img-circle">
-        </div>
-        <div class="col-xs-9">
-          <h4>Baptiste Lemoine</h4>
-          <p>baptiste.lemoine@gmail.com</p>
-        </div>
-      </div>
-      <div class="list-group">
-        <div class="list-group-item">          
-          <span class="icon-search pull-left"></span>
-          <h4 class="list-group-item-heading">Recherche</h4>
-            <label class="checkbox inline">
-              <input type="checkbox" checked value="web" onclick="null" /> 
-              <div class="regular-checkbox dark green"></div>
-              Web
-            </label>
-            <label class="checkbox inline">
-              <input type="checkbox" checked value="web" onclick="null" /> 
-              <div class="regular-checkbox dark orange"></div>
-              Actualités
-            </label>
-            <label class="checkbox inline">
-              <input type="checkbox" checked value="web" onclick="null" /> 
-              <div class="regular-checkbox dark blue"></div>
-              Social
-            </label>
-            <label class="checkbox inline">
-              <input type="checkbox" checked value="web" onclick="null" /> 
-              <div class="regular-checkbox dark purple"></div>
-              Shopping
-            </label>
-        </div>
-        <!-- <a class="list-group-item">
-          <span class="badge">14</span>
-          <h4 class="list-group-item-heading">Paramètres</h4>          
-          <p class="list-group-item-text">Se connecter et changer la langue</p>
-        </a> -->
-        <a class="list-group-item">          
-          <span class="icon-cog pull-left"></span>
-          <h4 class="list-group-item-heading">Paramètres</h4>
-        </a>
-        <a class="list-group-item">          
-          <span class="icon-info pull-left"></span>
-          <h4 class="list-group-item-heading">Qwant</h4>
-        </a>
+      <div ng-controller="SideBarController">
+        <div ng-include src="'partials/SideBarLeft.html'"></div>
       </div>
     </div>
-  </div>
-  <div snap-content>
-    <div class="header navbar-fixed-top">
-      <!-- <div class="rounded-btn"><span class="icon-menu"></span></div> -->
-      <div class="row">
-        <div class="col-xs-2">
-          <!-- <div class="divider"></div> -->
-          <span class="icon-menu-1" snap-toggle="left"></span>
-        </div>
-        <div class="col-xs-8">
-        </div>
-        <div class="col-xs-2">
-        </div>
+    <div snap-content>
+      <div ng-include src="'partials/header.html'"></div>
+      <div id="main">
+        <div ng-view></div>
       </div>
     </div>
-    <div id="main">
-      <div id="homeLogo"></div>
-      <div class="row searchbox-container">
-        <div class="col-xs-9"><input type="text" class="searchbox" placeholder="Rechercher" /></div>
-        <div class="col-xs-3"><div class="icon-search"></div></div>        
-      </div>
-    </div>
-  </div>
-  <div ng-view></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
