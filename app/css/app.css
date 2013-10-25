@@ -23,6 +23,9 @@ h6,
 label > * {
   pointer-events: none;
 }
+.snap-drawers {
+  height: 100%!important;
+}
 #main {
   margin-top: 50px;
   padding: 10px;
