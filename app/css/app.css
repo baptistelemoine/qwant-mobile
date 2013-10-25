@@ -106,7 +106,7 @@ snap-drawer,
 .snap-drawer,
 .x-snap-drawer,
 .snap-drawer {
-  position: fixed;
+  position: absolute;
   height: auto;
   top: 0;
   bottom: 0;
