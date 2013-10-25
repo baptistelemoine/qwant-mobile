@@ -1,4 +1,4 @@
-/*! qwant-mobile - v - 2013-10-24 */'use strict';
+/*! qwant-mobile - v - 2013-10-25 */'use strict';
 
 // Declare app level module which depends on filters, and services
 var app = angular.module('qwant', [
@@ -12,6 +12,7 @@ var app = angular.module('qwant', [
   'snap'
 ]).
 config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/', {templateUrl:'partials/home.html', controller:'HomeController'});
   $routeProvider.when('/search', {templateUrl: 'partials/searchResult.html', controller: 'SearchController'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
@@ -20,14 +21,28 @@ app.services = angular.module('qwant.services', []);
 app.controllers = angular.module('qwant.controllers', []);
 'use strict';
 
+app.controllers.controller('HomeController', ['$scope', function ($scope){
+	
+}]);
+'use strict';
+
 app.controllers.controller('SearchController',[
 	'$scope','SearchManager','$location', function ($scope, SearchManager, $location){
 
 	$scope.term = $location.search().q;
-	SearchManager.setSource('news');
+	SearchManager.setSource('all');
 	$scope.search = SearchManager;
 	SearchManager.nextPage($scope.term);
 
+}]);
+'use strict';
+
+
+app.controllers.controller('SideBarController', ['$scope', function ($scope){
+	$scope.user = {
+		'name':'Baptiste Lemoine',
+		'email':'baptiste.lemoine@gmail.com'
+	}
 }]);
 'use strict';
 
