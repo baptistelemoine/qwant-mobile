@@ -55,6 +55,23 @@ app.controllers.controller('SideBarController', ['$scope','$window','snapRemote'
 }]);
 'use strict';
 
+angular.module('snap').directive('snapDrawers', ['$window', function ($window){
+	return {
+		restrict:'AE',
+		link:function(scope, element, attributes){
+
+			$window.addEventListener('scroll', function (event){
+				element.css('top', this.document.body.scrollTop);
+			});
+
+			scope.$on('destroy', function(){
+				$window.removeEventListener('scroll');
+			});
+		}
+	}
+}]);
+'use strict';
+
 /* Directives */
 
 
