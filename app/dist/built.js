@@ -62,7 +62,7 @@ angular.module('snap').directive('snapDrawers', ['$window', function ($window){
 		link:function(scope, element, attributes){
 
 			$window.addEventListener('scroll', function (event){
-				element.css('top', this.document.documentElement.scrollTop||this.document.body.scrollTop);
+				element.css('top', (this.document.documentElement.scrollTop||this.document.body.scrollTop) + 45);
 			});
 
 			scope.$on('destroy', function(){
@@ -75,15 +75,26 @@ angular.module('snap').directive('snapDrawers', ['$window', function ($window){
 
 
 app.directives.directive('header', ['snapRemote', '$window', function (snapRemote, $window){
+	
 	return {
+		
 		restrict:'AE',
+		
+		templateUrl:'partials/header.html',
+
 		link:function(scope, element, attributes){
-			snapRemote.getSnapper().then(function (snapper){
+			
+			/*snapRemote.getSnapper().then(function (snapper){
+				
 				snapper.on('drag', function (){
 					var currentValue = $('.snap-content').offset().left;
+					var prop = 'translate3d(' + currentValue + 'px, 0,0)';
+					// element.attr('style', '-webkit-transform:'+prop);
+					// console.log(currentValue);
 				});
+
 			});
-		}
+*/		}
 	}
 }]);
 'use strict';
