@@ -6,7 +6,7 @@ angular.module('snap').directive('snapDrawers', ['$window', function ($window){
 		link:function(scope, element, attributes){
 
 			$window.addEventListener('scroll', function (event){
-				element.css('top', (this.document.documentElement.scrollTop||this.document.body.scrollTop) + 45);
+				element.css('top', this.document.documentElement.scrollTop||this.document.body.scrollTop);
 			});
 
 			scope.$on('destroy', function(){
