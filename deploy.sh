@@ -13,7 +13,7 @@ git show master:app/dist/app.min.js > app/js/app.min.js
 git show master:app/dist/angular-modules.min.js > app/js/angular-modules.min.js
 git show master:app/dist/vendor.min.js > app/js/vendor.min.js
 git show master:app/dist/app-min.css > app/css/app-min.css
-git show master:app/partials > app/partials
+git show master:app/partials/* > app/partials/
 #commit changes on production branch
 git add -A
 git commit -m "compile, ready to deploy"
