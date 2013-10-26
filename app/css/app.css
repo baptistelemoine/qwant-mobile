@@ -115,7 +115,7 @@ label > * {
 #main {
   margin-top: 45px;
   padding: 10px;
-  background-color: #e5e5e5;
+  background-color: #eee;
 }
 #homeLogo {
   margin-top: 15px;
@@ -313,12 +313,15 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
 }
 .list-item {
   background-color: white;
-  border: 1px solid #d8d8d8;
   border-bottom-width: 2px;
   min-height: 80px;
-  margin-bottom: 5px;
-  padding: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
   position: relative;
+}
+.list-item span.title {
+  font-weight: 500;
+  font-size: 16px;
 }
 .list-item .list-item-footer {
   height: 45px;
@@ -333,7 +336,6 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
   margin-top: 5px;
   font-size: 12px;
   opacity: .5;
-  margin-bottom: 40px;
 }
 .list-item span.source {
   text-transform: uppercase;
