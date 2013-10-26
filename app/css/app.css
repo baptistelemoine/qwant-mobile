@@ -319,9 +319,15 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
   padding: 10px;
   position: relative;
 }
-.list-item span.title {
+.list-item h4 {
+  margin-bottom: 5px;
   font-weight: 500;
   font-size: 16px;
+}
+.list-item span.time {
+  opacity: .5;
+  font-size: 12px;
+  margin-left: 5px;
 }
 .list-item .list-item-footer {
   height: 45px;
@@ -335,7 +341,7 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
 .list-item p.desc {
   margin-top: 5px;
   font-size: 12px;
-  opacity: .5;
+  opacity: .7;
 }
 .list-item span.source {
   text-transform: uppercase;
