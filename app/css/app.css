@@ -89,6 +89,7 @@ html {
   font-family: "Helvetica Neue", "Arimo", Helvetica, Arial, sans-serif;
   background-color: #232323;
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
 h1,
 h2,
@@ -112,9 +113,9 @@ label > * {
   height: 100%!important;
 }
 #main {
-  margin-top: 50px;
+  margin-top: 45px;
   padding: 10px;
-  background-color: #fff;
+  background-color: #e5e5e5;
 }
 #homeLogo {
   margin-top: 15px;
@@ -309,4 +310,51 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
   font-size: 18px;
   left: 11px;
   top: 9px;
+}
+.list-item {
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  border-bottom-width: 2px;
+  min-height: 80px;
+  margin-bottom: 5px;
+  padding: 20px;
+  position: relative;
+}
+.list-item .list-item-footer {
+  height: 45px;
+  background-color: #f5f5f5;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+.list-item p.desc {
+  margin-top: 5px;
+  font-size: 12px;
+  opacity: .5;
+  margin-bottom: 40px;
+}
+.list-item span.source {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  padding: 2px 5px;
+  margin-left: 2px;
+}
+.list-item span.source.web {
+  background-color: #1f7f5c;
+}
+.list-item span.source.news {
+  background-color: #de8650;
+}
+.list-item span.source.social {
+  background-color: #2489c5;
+}
+.list-item span.source.shopping {
+  background-color: #6a5a8c;
+}
+.list-item span.source.media {
+  background-color: #c0392b;
 }
