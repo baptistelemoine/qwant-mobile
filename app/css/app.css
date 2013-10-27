@@ -115,10 +115,10 @@ label > * {
 #main {
   margin-top: 45px;
   padding: 10px;
-  background-color: #eee;
+  background-color: #fff;
 }
 #homeLogo {
-  margin-top: 15px;
+  margin-top: 30px;
   background: url("/img/logocouleur@2x.png") no-repeat center center;
   background-size: 200px 57px;
   height: 100px;
@@ -163,8 +163,19 @@ label > * {
 }
 .header {
   height: 45px;
+  padding: 10px;
+}
+.header .rounded-btn {
+  width: 35px;
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 5px;
   background-color: #2489c5;
-  padding: 8px;
+}
+.header .rounded-btn > [class^="icon-"] {
+  color: white;
+  font-size: 16px;
 }
 .header .divider {
   width: 1px;
@@ -312,13 +323,9 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
   top: 9px;
 }
 .list-item {
-  background-color: white;
-  border-bottom-width: 2px;
-  min-height: 80px;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 30px;
+  padding: 5px;
   position: relative;
-  pointer-events: none;
 }
 .list-item h4 {
   margin-bottom: 5px;
@@ -331,11 +338,9 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
   margin-left: 5px;
 }
 .list-item .list-item-footer {
-  height: 45px;
-  background-color: #f5f5f5;
+  height: 30px;
+  background-color: #eee;
   position: absolute;
-  bottom: 0;
-  width: 100%;
   left: 0;
   right: 0;
 }
