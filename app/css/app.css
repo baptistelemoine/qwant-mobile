@@ -323,7 +323,6 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
   top: 9px;
 }
 .list-item {
-  margin-bottom: 30px;
   padding: 5px;
   position: relative;
 }
