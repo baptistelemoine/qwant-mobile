@@ -8,7 +8,12 @@ angular.module('snap').directive('snapDrawers', ['$window', 'snapRemote', functi
 		
 		link:function(scope, element, attributes){
 
-			snapRemote.getSnapper().then(function (snapper){
+			var snapper = null;
+
+			snapRemote.getSnapper().then(function (snap){
+				
+				snapper = snap;
+
 				snapper.on('drag', function (){
 					element.css('top', $window.document.documentElement.scrollTop||$window.document.body.scrollTop);
 				});
@@ -18,10 +23,10 @@ angular.module('snap').directive('snapDrawers', ['$window', 'snapRemote', functi
 			});
 
 			scope.$on('destroy', function(){
-				/*self.snapper.off('drag');
-				self.snapper.off('open');
-				self.snapper = null;
-*/			});
+				snapper.off('drag');
+				snapper.off('open');
+				snapper = null;
+			});
 		}
-	}
+	};
 }]);

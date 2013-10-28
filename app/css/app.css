@@ -1,4 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 snap-content,
 [snap\:content],
 [snap-content],
@@ -106,6 +108,12 @@ h6,
   font-family: "Helvetica Neue", "Arimo", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
+a {
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
 label > * {
   pointer-events: none;
 }
@@ -163,7 +171,7 @@ label > * {
 }
 .header {
   height: 45px;
-  padding: 10px;
+  padding: 15px;
 }
 .header .rounded-btn {
   width: 35px;
@@ -262,6 +270,10 @@ label > * {
 .user-info img.img-circle {
   width: 50px;
   height: 50px;
+}
+.snap-drawer-right {
+  padding: 10px;
+  color: white;
 }
 .checkbox {
   margin-bottom: 20px;

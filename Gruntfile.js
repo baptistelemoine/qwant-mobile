@@ -22,7 +22,7 @@ module.exports = function (grunt){
 				files: {
 					'app/dist/built.js' :['app/js/**/*.js'],
 					'app/dist/angular-modules.min.js' : ['app/lib/angular/angular-route.min.js', 'app/lib/angular/angular-sanitize.min.js'],
-					'app/dist/vendor.min.js' : ['app/lib/vendor/angular-snap/angular-snap.min.js', 'app/lib/vendor/ngInfiniteScroll/ng-infinite-scroll.min.js', 'app/lib/vendor/snapjs/snap.min.js', 'app/lib/vendor/fastclick/lib/fastclick.min.js']
+					'app/dist/vendor.min.js' : ['app/lib/vendor/angular-snap/angular-snap.min.js', 'app/lib/vendor/ngInfiniteScroll/ng-infinite-scroll.min.js', 'app/lib/vendor/snapjs/snap.min.js', 'app/lib/vendor/fastclick/lib/fastclick.min.js', 'app/lib/vendor/underscore/underscore-min.js']
 				}
 			},
 		},

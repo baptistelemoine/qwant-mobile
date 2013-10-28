@@ -4,7 +4,7 @@
 		<div ng-repeat="item in search.items">
 			<!-- <p>{{item.title}}</p> -->
 			<div class="list-item">
-				<h4 ng-bind-html="item.title"></h4>
+				<a href="{{item._id | detailsURL}}"><h4 ng-bind-html="item.title"></h4></a>
 				<span class="source {{item.s}}">{{item.s}}</span>
 				<span class="time">il y a 2 jours</span>
 				<p class="desc" ng-bind-html="item.desc"></p>
