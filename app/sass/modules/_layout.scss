@@ -16,12 +16,16 @@
 /* General Styles */
 
 body{
-	background-color: $c_primaryColor;
+	background-color: $c_darkBg;
 	background-image: linear-gradient(to bottom, green 0%, green 100%);
 }
 
 #content{
 	position: relative;
+}
+
+#main{
+	background: $c_darkBg;
 }
 
 .wrapped-content{

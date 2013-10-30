@@ -127,7 +127,7 @@ strong {
 
 blockquote, blockquote p {
   margin: 20px;
-  color: #fecd5f;
+  color: #36a1ce;
   font-weight: 300;
   font-size: 20px; }
 
@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.3; }
 
 .subheader {
-  color: #fecd5f; }
+  color: #36a1ce; }
 
 #content h2:first-child {
   margin-top: .5em; }
@@ -211,7 +211,7 @@ h6 {
     font-size: 12px; }
 
 a {
-  color: #fecd5f;
+  color: #36a1ce;
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
   a:hover {
@@ -256,7 +256,7 @@ input[type="submit"], input[type="reset"], input[type="button"], .button {
   display: inline-block;
   padding: 13px 32px;
   border: none;
-  background: #fecd5f;
+  background: #36a1ce;
   color: #fff;
   font-weight: 400;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -450,11 +450,14 @@ dl {
 **/
 /* General Styles */
 body {
-  background-color: #fecd5f;
+  background-color: #f3f3f3;
   background-image: linear, to bottom, green 0%, green 100%; }
 
 #content {
   position: relative; }
+
+#main {
+  background: #f3f3f3; }
 
 .wrapped-content {
   padding: 25px 25px;
@@ -508,11 +511,11 @@ body {
     .blog article h2 a {
       color: #333333; }
       .blog article h2 a:hover {
-        color: #fecd5f; }
+        color: #36a1ce; }
   .blog article p:first-child {
     margin-top: 0; }
 .blog .format-quote {
-  background: #fecd5f;
+  background: #36a1ce;
   color: #fff; }
   .blog .format-quote .icon-bg {
     color: #fec546; }
@@ -801,12 +804,12 @@ form p {
 *
 **/
 #container {
-  position: relative;
+  /*position: relative;
   top: 0;
   left: 0;
   z-index: 0;
   display: block;
-  overflow: hidden;
+  overflow: hidden;*/
   min-height: 100%;
   background: #34393d; }
 
@@ -862,7 +865,7 @@ form p {
     font-family: "Raleway", sans-serif;
     line-height: 46px; }
     .nav a.hover, .nav a.current {
-      background: #fecd5f; }
+      background: #36a1ce; }
   .nav ul {
     overflow: hidden;
     margin: 0;
@@ -927,7 +930,7 @@ form p {
       line-height: 1.2; }
     #author-profile .author-profile-content .subtitle {
       margin: 0;
-      color: #fecd5f;
+      color: #36a1ce;
       font-weight: 300;
       font-size: 12px;
       font-family: "Raleway", sans-serif;
@@ -1070,7 +1073,7 @@ form p {
   padding: 0;
   width: 100%;
   height: 48px;
-  background: #fecd5f;
+  background: #36a1ce;
   color: #fff;
   font: 700px; }
   #header a {
@@ -1114,6 +1117,91 @@ form p {
   .header-button.hover {
     color: #34393d; }
 
+snap-content,
+[snap\:content],
+[snap-content],
+[data-snap-content],
+[x-snap-content],
+.snap-content,
+.x-snap-content,
+snap-drawers,
+[snap\:drawers],
+[snap-drawers],
+[data-snap-drawers],
+[x-snap-drawers],
+.snap-drawers,
+.x-snap-drawers,
+.snap-drawers,
+.snap-content {
+  position: absolute;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  left: 0;
+  right: 0; }
+
+snap-drawer,
+[snap\:drawer],
+[snap-drawer],
+[data-snap-drawer],
+[x-snap-drawer],
+.snap-drawer,
+.x-snap-drawer,
+.snap-drawer {
+  position: absolute;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  -webkit-transition: top 0.2s linear;
+  -moz-transition: top 0.2s linear;
+  -o-transition: top 0.2s linear;
+  transition: top 0.2s linear;
+  -webkit-transition: bottom 0.2s linear;
+  -moz-transition: bottom 0.2s linear;
+  -o-transition: bottom 0.2s linear;
+  transition: bottom 0.2s linear;
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  -o-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  width: 266px;
+  height: 100%;
+  background: #34393d;
+  color: #fff; }
+
+.snap-content {
+  z-index: 2;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  -o-overflow-scrolling: touch;
+  overflow-scrolling: touch; }
+
+.snap-drawer-left {
+  left: 0;
+  z-index: 1;
+  color: #fff; }
+
+.snap-drawer-right {
+  right: 0;
+  z-index: 1; }
+
+.snapjs-left .snap-drawer-right,
+.snapjs-right .snap-drawer-left {
+  display: none; }
+
+.snapjs-expand-left .snap-drawer-left,
+.snapjs-expand-right .snap-drawer-right {
+  width: 100%; }
+
+.snap-content {
+  background-color: #f3f3f3; }
+
 /**
 *
 * Imports
@@ -1142,7 +1230,7 @@ form p {
 *
 **/
 .mark-text {
-  color: #fecd5f; }
+  color: #36a1ce; }
   .mark-text.green {
     color: #7dad83; }
   .mark-text.bluegreen {
@@ -1168,7 +1256,7 @@ form p {
 
 mark {
   padding: 2px 3px;
-  background: #ffedc4;
+  background: #88c7e2;
   color: #6b6b6b; }
   mark.green {
     background: #bcd4bf; }
@@ -1250,7 +1338,7 @@ mark {
   font-size: 12px;
   line-height: 31px; }
   .progress .meter {
-    background: #fedd92; }
+    background: #5fb4d8; }
   .progress.green .meter {
     background: #bcd4bf; }
   .progress.bluegreen .meter {
@@ -1589,7 +1677,7 @@ table.success {
     background: #dfeab9; }
 
 .highlight {
-  background: #ffedc4; }
+  background: #88c7e2; }
   .highlight.green {
     background: #bcd4bf; }
   .highlight.bluegreen {
@@ -1614,7 +1702,7 @@ table.success {
     background: #e98c87; }
 
 table tr.even .highlight, table tr.alt .highlight, table tr:nth-of-type(even) .highlight, thead .highlight, tfoot .highlight {
-  background: #ffe6b0; }
+  background: #78c0de; }
   table tr.even .highlight.green, table tr.alt .highlight.green, table tr:nth-of-type(even) .highlight.green, thead .highlight.green, tfoot .highlight.green {
     background: #afcdb3; }
   table tr.even .highlight.bluegreen, table tr.alt .highlight.bluegreen, table tr:nth-of-type(even) .highlight.bluegreen, thead .highlight.bluegreen, tfoot .highlight.bluegreen {
@@ -1689,7 +1777,7 @@ table tr.even .highlight, table tr.alt .highlight, table tr:nth-of-type(even) .h
     font-weight: normal;
     font-size: 13px; }
     .pricing-table .bullet-item.highlight, .pricing-table .description.highlight {
-      background: #fffefc;
+      background: #b5dced;
       font-weight: 600;
       font-size: 14px; }
   .pricing-table .description {
@@ -1705,8 +1793,8 @@ table tr.even .highlight, table tr.alt .highlight, table tr:nth-of-type(even) .h
     font-family: "Raleway", sans-serif; }
   .pricing-table .price {
     padding: 0.9375em 1.25em;
-    background: #fffefc;
-    color: #fecd5f;
+    background: #b5dced;
+    color: #36a1ce;
     text-align: center;
     font-weight: 600;
     font-size: 28px; }

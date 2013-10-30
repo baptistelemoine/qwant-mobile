@@ -1,7 +1,7 @@
 'use strict';
 
 
-app.directives.directive('header', ['snapRemote', '$window', function (snapRemote, $window){
+app.directives.directive('oldheader', ['snapRemote', '$window', function (snapRemote, $window){
 	
 	return {
 		
