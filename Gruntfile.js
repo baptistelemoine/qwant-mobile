@@ -53,7 +53,7 @@ module.exports = function (grunt){
 					'<%= grunt.template.today("yyyy-mm-dd") %> */'
 				},
 				files:{
-					'app/dist/app-min.css':['app/css/app.css', 'app/css/fontello.css']
+					'app/dist/app-min.css':['app/css/main.css', 'app/css/vendor/fontello.css']
 				}
 			}
 		}

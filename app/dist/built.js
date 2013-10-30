@@ -1,4 +1,4 @@
-/*! qwant-mobile - v - 2013-10-27 */'use strict';
+/*! qwant-mobile - v - 2013-10-30 */'use strict';
 
 // Declare app level module which depends on filters, and services
 var app = angular.module('qwant', [
@@ -20,6 +20,7 @@ config(['$routeProvider', function($routeProvider) {
 app.services = angular.module('qwant.services', []);
 app.controllers = angular.module('qwant.controllers', []);
 app.directives = angular.module('qwant.directives', []);
+app.filters = angular.module('qwant.filters', []);
 'use strict';
 
 app.controllers.controller('HomeController', ['$scope', function ($scope){
@@ -28,31 +29,44 @@ app.controllers.controller('HomeController', ['$scope', function ($scope){
 'use strict';
 
 app.controllers.controller('SearchController',[
-	'$scope','SearchManager','$location', function ($scope, SearchManager, $location){
+	'$scope','SearchManager','$location', 'snapRemote', '$route', function ($scope, SearchManager, $location, snapRemote, $route){
 
 	$scope.term = $location.search().q;
 	SearchManager.setSource('all');
 	$scope.search = SearchManager;
 	SearchManager.nextPage($scope.term);
+	
+/*	$scope.$on('$routeChangeSuccess', function (event, current, prev) {
+		
+		event.stopPropagation;
+		if(!current.params._id) return;
 
+		snapRemote.getSnapper().then(function (snapper) {
+			if($location.$$search._id) snapper.open('right');
+			snapper.on('close', function (){
+				$route.reloadOnSearch = false;
+				$scope.$apply($location.search(prev.params))
+			});
+		});
+	});	*/
+	
 }]);
 'use strict';
 
 
-app.controllers.controller('SideBarController', ['$scope','$window','snapRemote', function ($scope, $window, snapRemote){
+app.controllers.controller('SideBarLeftController', ['$scope','$window','snapRemote', function ($scope, $window, snapRemote){
 	$scope.user = {
 		'name':'Baptiste Lemoine',
 		'email':'baptiste.lemoine@gmail.com'
 	}
+}]);
+'use strict';
 
-	/*snapRemote.getSnapper().then(function (snapper){
-		var sideBar = $window.document.querySelector('.snap-drawers');
-		console.log(sideBar)
-	});
+
+app.controllers.controller('SideBarRightController', ['$scope','$window','snapRemote', function ($scope, $window, snapRemote){
+
 	
-	$window.addEventListener('scroll', function (e){
-		// console.log(this.document.body.scrollTop);
-	});*/
+
 }]);
 'use strict';
 
@@ -64,7 +78,12 @@ angular.module('snap').directive('snapDrawers', ['$window', 'snapRemote', functi
 		
 		link:function(scope, element, attributes){
 
-			snapRemote.getSnapper().then(function (snapper){
+			var snapper = null;
+
+			snapRemote.getSnapper().then(function (snap){
+				
+				snapper = snap;
+
 				snapper.on('drag', function (){
 					element.css('top', $window.document.documentElement.scrollTop||$window.document.body.scrollTop);
 				});
@@ -74,17 +93,17 @@ angular.module('snap').directive('snapDrawers', ['$window', 'snapRemote', functi
 			});
 
 			scope.$on('destroy', function(){
-				/*self.snapper.off('drag');
-				self.snapper.off('open');
-				self.snapper = null;
-*/			});
+				snapper.off('drag');
+				snapper.off('open');
+				snapper = null;
+			});
 		}
-	}
+	};
 }]);
 'use strict';
 
 
-app.directives.directive('header', ['snapRemote', '$window', function (snapRemote, $window){
+app.directives.directive('oldheader', ['snapRemote', '$window', function (snapRemote, $window){
 	
 	return {
 		
@@ -109,9 +128,11 @@ app.directives.directive('header', ['snapRemote', '$window', function (snapRemot
 }]);
 'use strict';
 
-/* Filters */
-
-var filters = angular.module('qwant.filters', []);
+app.filters.filter('detailsURL', ['$location', function ($location){
+	return function (input) {
+		return $location.$$absUrl.concat('&_id=', input);
+	};
+}]);
 'use strict';
 
 app.services.value('ConfigManager', {
