@@ -3,10 +3,17 @@
 <head>
   <meta charset="utf-8">
   <title>Qwant - Mobile</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
-  <link rel="stylesheet" type="text/css" href="css/app-min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/0.6.7/fastclick.min.js"></script>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <link rel='stylesheet' href='css/vendor/normalize.css'>
+  <link rel='stylesheet' href='css/vendor/fontello.css'>
+  <link rel='stylesheet' href='css/app-min.css'>
+
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,100,200,700,500' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+
   <script type="text/javascript">
     window.addEventListener('load', function() {
         FastClick.attach(document.body);
@@ -14,16 +21,24 @@
   </script>
 
 </head>
-<body>
-  <div snap-drawers>
-      <div ng-controller="SideBarController">
-        <div ng-include src="'partials/SideBarLeft.html'"></div>
+<body class="touch-gesture">
+
+  <div id="container">
+      <div snap-drawers>
+        <div ng-controller="SideBarLeftController">
+          <div ng-include src="'partials/SideBarLeft.html'"></div>
+        </div>
+        <div ng-controller="SideBarRightController">
+          <div ng-include src="'partials/SideBarRight.html'"></div>
+        </div>
       </div>
-    </div>
-    <div snap-content>
-      <div header class="header navbar-fixed-top"></div>
-      <div id="main">
-        <div ng-view></div>
+      <div snap-content>
+        <header id="header">
+          <div id="menu-trigger" snap-toggle="left" class="header-button left icon-menu"></div>
+        </header>
+        <div id="main">
+          <div ng-view></div>
+        </div>
       </div>
     </div>
 
