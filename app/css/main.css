@@ -538,11 +538,33 @@ body {
 .blog .format-quote {
   background: #36a1ce;
   color: #fff; }
+  .blog .format-quote .article-profile-photo {
+    float: left; }
+  .blog .format-quote img {
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px; }
+  .blog .format-quote .article-profile {
+    padding-left: 50px;
+    padding-top: 5px; }
+    .blog .format-quote .article-profile p {
+      color: white;
+      margin: 0;
+      line-height: 1.3; }
+      .blog .format-quote .article-profile p:first-child {
+        font-size: 16px;
+        font-weight: 600; }
+      .blog .format-quote .article-profile p.time {
+        opacity: .5;
+        font-size: 12px; }
   .blog .format-quote .icon-bg {
     color: #fec546; }
   .blog .format-quote blockquote {
-    margin: 10px 8px;
-    color: #fff; }
+    margin: 10px 0;
+    color: #fff;
+    font-size: 16px; }
+    .blog .format-quote blockquote:before {
+      margin-right: .7em; }
 .blog .format-link a {
   font-weight: 300;
   font-size: 20px; }

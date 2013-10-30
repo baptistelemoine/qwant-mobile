@@ -4,7 +4,7 @@
 		<div infinite-scroll="search.nextPage(term)" infinite-scroll-disabled="false" infinite-scroll-distance="0" infinite-scroll-immediate-check="false">
 			<div ng-repeat="item in search.items">
 				<!-- <p>{{item.title}}</p> -->
-				<article>
+				<article ng-show="{{item.s !== 'social'}}">
 					<div class="wrapped-content" style="padding-bottom:10px;">
 						<div class="title">
 							<span class="category {{item.s}}">{{item.s}}</span>
@@ -17,6 +17,17 @@
 						<p class="desc" ng-bind-html="item.desc"></p>
 						<hr>
 						<p class="read-more"><a href="#">Read More</a></p>
+					</div>
+				</article>
+				<article ng-show="{{item.s === 'social'}}" class="format-quote">
+					<div class="wrapped-content">
+						<div class="profile-container">
+							<div class="article-profile-photo">
+								<img ng-src="{{item.img}}">
+							</div>
+							<div class="article-profile"><p>{{item.title}}</p><p class="time">il y a 2 minutes</p></div>
+						</div>
+						<blockquote class="icon-twitter" ng-bind-html="item.desc"></blockquote>
 					</div>
 				</article>
 			</div>
