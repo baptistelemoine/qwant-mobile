@@ -9,28 +9,13 @@ module.exports = function (grunt){
 			}
 		},
 		watch:{
-			files : ['app/less/*.less'],
-			tasks : ['less']
+			files : ['app/sass/**/*.scss'],
+			tasks : ['sass']
 		},
 		sass:{
 			dist:{
 				files:{
 					'app/css/main.css':'app/sass/style.scss'
-				}
-			}
-		},
-		compass: {
-			dist: {
-				options: {
-					sassDir: 'app/sass',
-					cssDir: 'app/css',
-					environment: 'production'
-				}
-			},
-			dev: {
-				options: {
-					sassDir: 'app/sass',
-					cssDir: 'app/css'
 				}
 			}
 		},

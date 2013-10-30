@@ -3,16 +3,17 @@
 * Modules
 *
 **/
+@import 'bourbon/bourbon';
 
+@import 'modules/_helpers';
+@import 'modules/_typography';
+@import 'modules/_layout';
+@import 'modules/_sidebar';
+@import 'modules/_header';
 
-
-@import '_layout';
-@import '_sidebar';
-@import '_header';
-
-@import '_marktext';
-@import '_progress';
-@import '_panel';
-@import '_alert';
-@import '_table';
-@import '_pricingtables';
+@import 'modules/_marktext';
+@import 'modules/_progress';
+@import 'modules/_panel';
+@import 'modules/_alert';
+@import 'modules/_table';
+@import 'modules/_pricingtables';
