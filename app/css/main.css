@@ -456,8 +456,11 @@ body {
 #content {
   position: relative; }
 
-#main {
-  background: #f3f3f3; }
+#main-content {
+  background: #f3f3f3;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 .wrapped-content {
   padding: 25px 25px;
@@ -483,7 +486,7 @@ body {
 
 .blog article {
   background: #fff;
-  margin: 20px 15px 40px;
+  margin: 20px 15px 30px;
   padding: 0;
   overflow: hidden;
   position: relative; }
@@ -498,20 +501,38 @@ body {
     .blog article .title:after {
       clear: both; }
     .blog article .title .category {
-      color: #fb9537; }
+      background-color: #fb9537;
+      color: white;
+      padding: 2px 5px;
+      font-size: 10px; }
+      .blog article .title .category.web {
+        background-color: #609767; }
+      .blog article .title .category.news {
+        background-color: #f65924; }
+      .blog article .title .category.social {
+        background-color: #339ac7; }
+      .blog article .title .category.shopping {
+        background-color: #febd2c; }
+      .blog article .title .category.media {
+        background-color: #d16e68; }
     .blog article .title .time {
       float: right;
-      color: #b4b4b4; }
+      color: #b4b4b4;
+      text-transform: none; }
   .blog article img {
     width: 100%;
     height: auto; }
   .blog article h2 {
-    margin: 13px 0 0;
-    font-size: 20px; }
+    margin: 20px 0 0;
+    font-size: 18px;
+    font-weight: 500; }
     .blog article h2 a {
       color: #333333; }
       .blog article h2 a:hover {
         color: #36a1ce; }
+  .blog article p.desc {
+    opacity: .8;
+    font-size: 13px; }
   .blog article p:first-child {
     margin-top: 0; }
 .blog .format-quote {
@@ -1134,7 +1155,7 @@ snap-drawers,
 .snap-drawers,
 .snap-content {
   position: absolute;
-  height: auto;
+  height: 100%;
   top: 0;
   bottom: 0;
   width: auto;
@@ -1167,7 +1188,6 @@ snap-drawer,
   -o-overflow-scrolling: touch;
   overflow-scrolling: touch;
   width: 266px;
-  height: 100%;
   background: #34393d;
   color: #fff; }
 

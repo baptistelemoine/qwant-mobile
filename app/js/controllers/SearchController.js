@@ -4,7 +4,7 @@ app.controllers.controller('SearchController',[
 	'$scope','SearchManager','$location', 'snapRemote', '$route', function ($scope, SearchManager, $location, snapRemote, $route){
 
 	$scope.term = $location.search().q;
-	SearchManager.setSource('news');
+	SearchManager.setSource('all');
 	$scope.search = SearchManager;
 	SearchManager.nextPage($scope.term);
 	

@@ -24,8 +24,11 @@ body{
 	position: relative;
 }
 
-#main{
+#main-content{
 	background: $c_darkBg;
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .wrapped-content{
@@ -67,7 +70,8 @@ body{
 .blog{
 	article{
 		background: #fff;
-		margin: 20px 15px 40px;
+		// margin: 20px 15px 40px;
+		margin: 20px 15px 30px;
 		padding: 0;
 		overflow: hidden;
 		position: relative;
@@ -79,12 +83,22 @@ body{
 			@include clearfix();
 
 			.category{
-				color: $c_secondaryColor;
+				background-color: $c_secondaryColor;
+				color: white;
+				padding: 2px 5px;;
+				font-size: 10px;
+				&.web{ background-color: $c_primaryGreenActive; }
+				&.news{ background-color: $c_primaryOrangeActive; }
+				&.social{ background-color: $c_primaryBlueActive; }
+				&.shopping{ background-color: $c_primaryYellowActive; }
+				&.media{ background-color: $c_primaryRedActive; }
+
 			}
 
 			.time{
 				float: right;
 				color: #b4b4b4;
+				text-transform: none;
 			}
 		}
 
@@ -94,8 +108,11 @@ body{
 		}
 
 		h2{
-			margin: 13px 0 0;
-			font-size: 20px;
+			// margin: 13px 0 0;
+			margin: 20px 0 0;
+			// font-size: 20px;
+			font-size: 18px;
+			font-weight: 500;
 
 			a{
 				color: $c_heading;
@@ -104,6 +121,11 @@ body{
 					color: $c_primaryColor;
 				}
 			}
+		}
+
+		p.desc {
+			opacity: .8;
+			font-size: 13px;
 		}
 
 		p:first-child{
