@@ -463,7 +463,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 .wrapped-content {
-  padding: 20px 20px;
+  padding: 25px 25px;
   z-index: 2;
   position: relative; }
 
@@ -479,7 +479,19 @@ body {
 
 /* Blog */
 .read-more {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-size: 13px; }
+
+.pricing {
+  float: right;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333; }
+
+.media-thumb {
+  width: 60px !important;
+  float: left;
+  margin-right: 10px; }
 
 .share-widget a {
   margin: 0 20px; }
@@ -508,13 +520,13 @@ body {
       .blog article .title .category.web {
         background-color: #609767; }
       .blog article .title .category.news {
-        background-color: #f65924; }
+        background-color: #f87e55; }
       .blog article .title .category.social {
         background-color: #339ac7; }
       .blog article .title .category.shopping {
         background-color: #febd2c; }
       .blog article .title .category.media {
-        background-color: #d16e68; }
+        background-color: #e57871; }
     .blog article .title .time {
       float: right;
       color: #b4b4b4;
@@ -532,7 +544,13 @@ body {
         color: #36a1ce; }
   .blog article p.desc {
     opacity: .8;
-    font-size: 13px; }
+    font-size: 13px;
+    display: -webkit-box;
+    margin: 0 auto;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden; }
   .blog article p:first-child {
     margin-top: 0; }
 .blog .format-quote {
@@ -908,7 +926,7 @@ form p {
     font-family: "Raleway", sans-serif;
     line-height: 46px; }
     .nav a.hover, .nav a.current {
-      background: #36a1ce; }
+      background: #282c2f; }
   .nav ul {
     overflow: hidden;
     margin: 0;

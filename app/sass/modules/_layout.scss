@@ -32,7 +32,7 @@ body{
 }
 
 .wrapped-content{
-	padding: 20px 20px;
+	padding: 25px 25px;
 	z-index: 2;
 	position: relative;
 }
@@ -59,6 +59,20 @@ body{
 
 .read-more{
 	margin-bottom: 0;
+	font-size: 13px;
+}
+
+.pricing{
+	float: right;
+	font-weight: 600;
+	font-size: 16px;
+	color:#333;
+}
+
+.media-thumb{
+	width: 60px!important;
+	float: left;
+	margin-right: 10px;
 }
 
 .share-widget{
@@ -88,10 +102,10 @@ body{
 				padding: 2px 5px;;
 				font-size: 10px;
 				&.web{ background-color: $c_primaryGreenActive; }
-				&.news{ background-color: $c_primaryOrangeActive; }
+				&.news{ background-color: $c_primaryOrange; }
 				&.social{ background-color: $c_primaryBlueActive; }
 				&.shopping{ background-color: $c_primaryYellowActive; }
-				&.media{ background-color: $c_primaryRedActive; }
+				&.media{ background-color: $c_primaryRed; }
 
 			}
 
@@ -126,6 +140,13 @@ body{
 		p.desc {
 			opacity: .8;
 			font-size: 13px;
+			display: -webkit-box;
+			// height: 13px*1.7*5; /* Fallback for non-webkit */
+			margin: 0 auto;
+			-webkit-line-clamp: 5;
+			-webkit-box-orient: vertical;
+			text-overflow: ellipsis;
+			overflow: hidden;
 		}
 
 		p:first-child{

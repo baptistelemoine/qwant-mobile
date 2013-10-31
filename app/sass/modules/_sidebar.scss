@@ -84,7 +84,7 @@
 		line-height: $h_sidebarMenuItem;
 
 		&.hover, &.current{
-			background: $c_primaryColor;
+			background: darken($c_primaryDark, 5%);
 		}
 	}
 
