@@ -147,6 +147,7 @@ body{
 			-webkit-box-orient: vertical;
 			text-overflow: ellipsis;
 			overflow: hidden;
+			clear: both;
 		}
 
 		p:first-child{
@@ -155,7 +156,7 @@ body{
 	}
 
 	.format-quote{
-		background: $c_primaryColor;
+		background: $c_primaryBlueTwitter;
 		color: #fff;
 
 		.article-profile-photo{

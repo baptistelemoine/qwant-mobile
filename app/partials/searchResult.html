@@ -9,7 +9,7 @@
 							<span class="time">il y a 2 jours</span>
 						</div>
 						<div>
-							<img class="media-thumb" ng-if="item.type && item.type === 'image'" ng-src="{{item.thumbnail}}">
+							<img class="media-thumb" ng-if="(item.type && item.type === 'image') || item.s ==='shopping'" ng-src="{{item.thumbnail}}">
 							<h2 ng-bind-html="item.title"></h2>
 						</div>
 					</div>
@@ -19,7 +19,7 @@
 					<div class="wrapped-content" style="padding-top:0;">
 						<p class="desc" ng-bind-html="item.desc"></p>
 						<hr>
-						<span class="read-more"><a href="#">{{item.url_display || (item.source || item.url) | host}}</a></span>
+						<span class="read-more"><a ng-href="{{item.url}}">{{item.url_display || item.url | host}}</a></span>
 						<span ng-if="item.s === 'shopping'" class="pricing">{{item.price | pricing}}</span>
 					</div>
 				</article>
@@ -36,6 +36,9 @@
 				</article>
 			</div>
 		</div>
-		<p ng-show="search.busy">Loading</p>
+		<div ng-show="search.busy" class="spinner-container">
+		   <span class="spinner"></span>
+		</div>
+		<!-- <p ng-show="search.busy">Loading</p> -->
 	</div>
 </div>

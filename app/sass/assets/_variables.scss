@@ -6,11 +6,12 @@
 
 /* Colors */
 
-$c_primaryGreen: #7dad83;
+$c_primaryGreen: #27ae60;
 $c_primaryGreenActive: darken($c_primaryGreen, 10%);
 $c_primaryBlueGreen: #5eaaa7;
 $c_primaryBlueGreenActive: darken($c_primaryBlueGreen, 10%);
-$c_primaryBlue: #36a1ce;
+$c_primaryBlue: #3594CA;
+$c_primaryBlueTwitter: #36a1ce;
 $c_primaryBlueActive: #339ac7;
 $c_primaryLightBlue: #3cabda;
 $c_primaryLightBlueActive: darken($c_primaryLightBlue, 10%);
@@ -20,9 +21,9 @@ $c_primaryYellow: #fecd5f;
 $c_primaryYellowActive: darken($c_primaryYellow, 10%);
 $c_primaryGrey: #e6e7e7;
 $c_primaryGreyActive: darken($c_primaryGrey, 10%);
-$c_primaryOrange: #f87e55;
+$c_primaryOrange: #e67e22;
 $c_primaryOrangeActive: darken($c_primaryOrange, 10%);
-$c_primaryRed: #e57871;
+$c_primaryRed: #e74c3c;
 $c_primaryRedActive: #d16e68;
 $c_alert: lighten(#fc665f, 5%);
 $c_success: lighten(#b3cc57, 10%);
