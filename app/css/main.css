@@ -926,6 +926,8 @@ form p {
     font-size: 14px;
     font-family: "Raleway", sans-serif;
     line-height: 46px; }
+    .nav a:before {
+      margin-right: 1em; }
     .nav a.hover, .nav a.current {
       background: #282c2f; }
   .nav ul {
@@ -937,6 +939,18 @@ form p {
       list-style: none; }
       .nav ul li a {
         padding: 0 10px 0 38px; }
+    .nav ul.checkbox-list li {
+      margin-left: 50px; }
+      .nav ul.checkbox-list li.green:before {
+        color: #27ae60; }
+      .nav ul.checkbox-list li.orange:before {
+        color: #e67e22; }
+      .nav ul.checkbox-list li.blue:before {
+        color: #3594ca; }
+      .nav ul.checkbox-list li.red:before {
+        color: #e74c3c; }
+      .nav ul.checkbox-list li.yellow:before {
+        color: #fecd5f; }
 
 .nav-child-container {
   position: absolute;
@@ -1319,6 +1333,57 @@ snap-drawer,
 @keyframes spin {
   to {
     transform: rotate(360deg); } }
+
+.checkbox {
+  margin-bottom: 20px;
+  margin-top: 20px; }
+
+label.checkbox {
+  padding-left: 0;
+  font-weight: normal;
+  padding-left: 40px;
+  color: #b2b5b5;
+    /*span{
+        margin-left: 40px;
+        opacity: .5;
+        font-weight: normal;
+    }
+*/ }
+
+input[type="checkbox"] {
+  display: none; }
+
+input[type="checkbox"] + div.regular-checkbox {
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  float: right;
+  margin-right: 50px;
+  border: 1px solid rgba(255, 255, 255, 0); }
+  input[type="checkbox"] + div.regular-checkbox.dark {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.05); }
+input[type="checkbox"]:checked + div.regular-checkbox {
+  /*&.blue { background-color: $c_primaryBlue;}
+  &.green { background-color: $c_primaryGreenActive;}
+  &.orange { background-color: $c_primaryOrange;}
+  &.red { background-color: $c_primaryRed;}
+  &.yellow { background-color: $c_primaryYellow;}*/ }
+input[type="checkbox"]:checked + div.regular-checkbox:after {
+  pointer-events: none;
+  font-family: 'fontello';
+  font-size: 11px;
+  content: '\e8d5';
+  color: #b2b5b5;
+  margin-left: 6px; }
+
+.big-checkbox {
+  padding: 18px; }
+
+.big-checkbox:checked:after {
+  font-size: 18px;
+  left: 11px;
+  top: 9px; }
 
 /**
 *

@@ -19,7 +19,7 @@
 					<div class="wrapped-content" style="padding-top:0;">
 						<p class="desc" ng-bind-html="item.desc"></p>
 						<hr>
-						<span class="read-more"><a ng-href="{{item.url}}">{{item.url_display || item.url | host}}</a></span>
+						<span class="read-more"><a ng-href="{{item.url}}" target="_blank">{{item.url_display || item.url | host}}</a></span>
 						<span ng-if="item.s === 'shopping'" class="pricing">{{item.price | pricing}}</span>
 					</div>
 				</article>

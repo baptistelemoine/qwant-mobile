@@ -83,6 +83,10 @@
 		font-family: $ff_heading;
 		line-height: $h_sidebarMenuItem;
 
+		&:before{
+			margin-right: 1em;
+		}
+
 		&.hover, &.current{
 			background: darken($c_primaryDark, 5%);
 		}
@@ -99,6 +103,27 @@
 			
 			a{
 				padding: 0 10px 0 38px;
+			}
+		}
+
+		&.checkbox-list{
+			li{
+				margin-left: 50px;
+				&.green:before{
+					color: $c_primaryGreen;
+				}
+				&.orange:before{
+					color: $c_primaryOrange;
+				}
+				&.blue:before{
+					color: $c_primaryBlue;
+				}
+				&.red:before{
+					color: $c_primaryRed;
+				}
+				&.yellow:before{
+					color: $c_primaryYellow;
+				}
 			}
 		}
 	}
