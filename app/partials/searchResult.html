@@ -1,25 +1,29 @@
 <div id="main-content" class="blog">
 	<div ng-controller="SearchController">
-		<!-- <input type="text" ng-model="term"></input><button ng-click="search.nextPage(term)">valider</button> -->
 		<div infinite-scroll="search.nextPage(term)" infinite-scroll-disabled="false" infinite-scroll-distance="0" infinite-scroll-immediate-check="false">
 			<div ng-repeat="item in search.items">
-				<!-- <p>{{item.title}}</p> -->
-				<article ng-show="{{item.s !== 'social'}}">
+				<article ng-if="item.s !== 'social'">
 					<div class="wrapped-content" style="padding-bottom:10px;">
 						<div class="title">
 							<span class="category {{item.s}}">{{item.s}}</span>
-							<!-- <span class="category">news</span> -->
 							<span class="time">il y a 2 jours</span>
 						</div>
-						<h2 ng-bind-html="item.title"></h2>
+						<div>
+							<img class="media-thumb" ng-if="(item.type && item.type === 'image') || item.s ==='shopping'" ng-src="{{item.thumbnail}}">
+							<h2 ng-bind-html="item.title"></h2>
+						</div>
+					</div>
+					<div ng-if="item.type && item.type === 'video'" class="flex-video" style="margin:15px 0;">
+						<iframe ng-src="{{item.media | yturlformat | sce }}" frameborder="0"></iframe>
 					</div>
 					<div class="wrapped-content" style="padding-top:0;">
 						<p class="desc" ng-bind-html="item.desc"></p>
 						<hr>
-						<p class="read-more"><a href="#">Read More</a></p>
+						<span class="read-more"><a ng-href="{{item.url}}" target="_blank">{{item.url_display || item.url | host}}</a></span>
+						<span ng-if="item.s === 'shopping'" class="pricing">{{item.price | pricing}}</span>
 					</div>
 				</article>
-				<article ng-show="{{item.s === 'social'}}" class="format-quote">
+				<article ng-if="item.s === 'social'" class="format-quote">
 					<div class="wrapped-content">
 						<div class="profile-container">
 							<div class="article-profile-photo">
@@ -32,6 +36,9 @@
 				</article>
 			</div>
 		</div>
-		<p ng-show="search.busy">Loading</p>
+		<div ng-show="search.busy" class="spinner-container">
+		   <span class="spinner"></span>
+		</div>
+		<!-- <p ng-show="search.busy">Loading</p> -->
 	</div>
 </div>
