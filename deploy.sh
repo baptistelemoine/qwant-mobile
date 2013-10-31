@@ -14,8 +14,8 @@ git show master:app/dist/angular-modules.min.js > app/js/angular-modules.min.js
 git show master:app/dist/vendor.min.js > app/js/vendor.min.js
 git show master:app/dist/app-min.css > app/css/app-min.css
 #copy entire partial and font folders folder
-git checkout master -- app/partials app/font
-git add app/partials/ app/font
+git checkout master -- app/partials app/font app/img
+git add app/partials/ app/font app/img
 #commit changes on production branch
 git add -A
 git commit -m "compile, ready to deploy"
