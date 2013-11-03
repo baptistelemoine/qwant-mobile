@@ -456,11 +456,20 @@ body {
 #content {
   position: relative; }
 
+label.checkbox > * {
+  pointer-events: none; }
+
 #main-content {
   background: #f3f3f3;
   -webkit-user-select: none;
   -webkit-user-drag: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  overflow-y: scroll;
+  top: 48px;
+  height: auto;
+  bottom: 0;
+  width: 100%; }
 
 .wrapped-content {
   padding: 25px 25px;
@@ -1343,6 +1352,7 @@ label.checkbox {
   font-weight: normal;
   padding-left: 40px;
   color: #b2b5b5;
+  display: inline-block;
     /*span{
         margin-left: 40px;
         opacity: .5;

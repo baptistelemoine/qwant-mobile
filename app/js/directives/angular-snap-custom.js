@@ -15,10 +15,10 @@ angular.module('snap').directive('snapDrawers', ['$window', 'snapRemote', functi
 				snapper = snap;
 
 				snapper.on('drag', function (){
-					element.css('top', $window.document.documentElement.scrollTop||$window.document.body.scrollTop);
+					// element.css('top', $window.document.documentElement.scrollTop||$window.document.body.scrollTop);
 				});
 				snapper.on('open', function (){
-					element.css('top', $window.document.documentElement.scrollTop||$window.document.body.scrollTop);
+					// element.css('top', $window.document.documentElement.scrollTop||$window.document.body.scrollTop);
 				});
 			});
 
