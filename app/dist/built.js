@@ -1,4 +1,4 @@
-/*! qwant-mobile - v - 2013-10-31 */'use strict';
+/*! qwant-mobile - v - 2013-11-03 */'use strict';
 
 // Declare app level module which depends on filters, and services
 var app = angular.module('qwant', [
@@ -85,10 +85,10 @@ angular.module('snap').directive('snapDrawers', ['$window', 'snapRemote', functi
 				snapper = snap;
 
 				snapper.on('drag', function (){
-					element.css('top', $window.document.documentElement.scrollTop||$window.document.body.scrollTop);
+					// element.css('top', $window.document.documentElement.scrollTop||$window.document.body.scrollTop);
 				});
 				snapper.on('open', function (){
-					element.css('top', $window.document.documentElement.scrollTop||$window.document.body.scrollTop);
+					// element.css('top', $window.document.documentElement.scrollTop||$window.document.body.scrollTop);
 				});
 			});
 
