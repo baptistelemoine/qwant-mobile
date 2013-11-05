@@ -1,4 +1,4 @@
-/*! qwant-mobile - v - 2013-11-03 */'use strict';
+/*! qwant-mobile - v - 2013-11-05 */'use strict';
 
 // Declare app level module which depends on filters, and services
 var app = angular.module('qwant', [
