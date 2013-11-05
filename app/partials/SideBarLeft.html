@@ -5,8 +5,8 @@
 				<img src="img/baptiste.jpeg">
 			</div>
 			<div class="author-profile-content">
-				<p class="title">Baptiste</p>
-				<p class="subtitle">blemoine@gmail.com</p>
+				<p class="title">{{user.name}}</p>
+				<p class="subtitle">{{user.email}}</p>
 			</div>
 		</div>
 		<nav id="nav-container">
@@ -49,19 +49,15 @@
 							</li>
 						</label>
 						<li class="search-ctrl">
-							<input type="text" placeholder="federer">
-							<a href="#" class="button">Go</a>
+							<div class="sidebar-input-ctrl">
+								<input type="text" ng-model="term" placeholder="{{defaultTerm}}">
+								<a class="sidebar-search" ng-href="#/search?q={{term}}"><i class="icon-search"></i></a>
+							</div>
 						</li>
 					</ul>
 					
 				</li>
 				<li><a href="#" class="nav-with-ul icon-cog">Paramètres</a></li>
-				<li><a href="#" class="nav-with-ul icon-info-1">Qwant</a></li>
-				<li><a href="#" class="nav-with-ul icon-info-1">Qwant</a></li>
-				<li><a href="#" class="nav-with-ul icon-info-1">Qwant</a></li>
-				<li><a href="#" class="nav-with-ul icon-info-1">Qwant</a></li>
-				<li><a href="#" class="nav-with-ul icon-info-1">Qwant</a></li>
-				<li><a href="#" class="nav-with-ul icon-info-1">Qwant</a></li>
 				<li><a href="#" class="nav-with-ul icon-info-1">Qwant</a></li>
 			</ul>
 		</nav>

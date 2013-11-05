@@ -1,5 +1,9 @@
-<div id="homeLogo"></div>
-<div class="row searchbox-container">
-	<div class="col-xs-9"><input type="text" class="searchbox" placeholder="Rechercher" /></div>
-	<div class="col-xs-3"><div class="icon-search"></div></div>        
+<div class="home-container">
+	<div class="searchbox-container">
+		<div id="homeLogo"></div>
+		<div class="input-container">
+			<input type="search" class="searchbox" ng-model="term" placeholder="Rechercher" />
+			<a ng-href="#/search?q={{term}}"><i class="icon-search"></i></a>
+		</div>
+	</div>
 </div>
