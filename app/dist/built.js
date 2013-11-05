@@ -23,42 +23,39 @@ app.directives = angular.module('qwant.directives', []);
 app.filters = angular.module('qwant.filters', []);
 'use strict';
 
-app.controllers.controller('HomeController', ['$scope', function ($scope){
-	
+app.controllers.controller('HomeController', ['$scope','$rootScope', function ($scope, $rootScope){
+	$rootScope.isHomePage = true;
 }]);
 'use strict';
 
 app.controllers.controller('SearchController',[
-	'$scope','SearchManager','$location', 'snapRemote', '$route', function ($scope, SearchManager, $location, snapRemote, $route){
+	'$scope','SearchManager','$location', 'snapRemote', '$route', '$rootScope', function ($scope, SearchManager, $location, snapRemote, $route, $rootScope){
 
 	$scope.term = $location.search().q;
 	SearchManager.setSource('all');
 	$scope.search = SearchManager;
 	SearchManager.nextPage($scope.term);
-	
-/*	$scope.$on('$routeChangeSuccess', function (event, current, prev) {
-		
-		event.stopPropagation;
-		if(!current.params._id) return;
 
-		snapRemote.getSnapper().then(function (snapper) {
-			if($location.$$search._id) snapper.open('right');
-			snapper.on('close', function (){
-				$route.reloadOnSearch = false;
-				$scope.$apply($location.search(prev.params))
-			});
-		});
-	});	*/
-	
+	$rootScope.isHomePage = false;
+
+	snapRemote.close();
+		
 }]);
 'use strict';
 
 
-app.controllers.controller('SideBarLeftController', ['$scope','$window','snapRemote', function ($scope, $window, snapRemote){
+app.controllers.controller('SideBarLeftController', ['$scope','$window','snapRemote', '$location', function ($scope, $window, snapRemote, $location){
 	$scope.user = {
-		'name':'Baptiste Lemoine',
-		'email':'baptiste.lemoine@gmail.com'
+		'name':'Baptiste',
+		'email':'hello@gmail.com'
 	}
+
+	$scope.defaultTerm = $location.$$search.q !== undefined ? $location.$$search.q : 'Rechercher';
+
+	$scope.$on('$locationChangeSuccess', function (e){
+		$scope.defaultTerm = $location.$$search.q !== undefined ? $location.$$search.q : 'Rechercher';
+	});
+
 }]);
 'use strict';
 
