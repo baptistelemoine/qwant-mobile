@@ -39,6 +39,9 @@ var searchRequest = function (request, source, callback){
 				output += data;
 			});
 			res.on('end', function(){
+				
+				if(source === 'all') return callback(null, JSON.parse(output));
+				
 				var result = JSON.parse(output);
 				_.map(result[source], function (value){
 					value.s = source;
@@ -67,7 +70,7 @@ app.get('/search', function (request, response){
 		requests.push(req(sources[i]));
 	}
 
-	if(request.query.source){
+	if(request.query.source && request.query.source !== 'all'){
 		async.parallel(requests, function (error, data){
 			var d = _.flatten(data);
 			var items = _.shuffle(d);
