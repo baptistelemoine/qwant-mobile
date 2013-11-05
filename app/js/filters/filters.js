@@ -32,3 +32,10 @@ app.filters.filter('pricing', function (){
 		return input.replace('&euro;', '€');
 	}
 });
+
+app.filters.filter('source',  function (){
+	return function (input){
+		if(input) return input.concat('toto');
+		return input;
+	}
+});
