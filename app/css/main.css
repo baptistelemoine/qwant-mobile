@@ -464,12 +464,12 @@ label.checkbox > * {
   -webkit-user-select: none;
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  position: fixed;
-  overflow-y: scroll;
-  top: 48px;
-  height: auto;
-  bottom: 0;
-  width: 100%; }
+  /*	position: fixed;
+  	overflow-y: scroll;
+  	top: 48px;
+  	height: auto;
+  	bottom: 0;
+  	width: 100%;*/ }
 
 .wrapped-content {
   padding: 25px 25px;
@@ -938,7 +938,7 @@ form p {
     .nav a:before {
       margin-right: 1em; }
     .nav a.hover, .nav a.current {
-      background: #282c2f; }
+      background: #3594ca; }
   .nav ul {
     overflow: hidden;
     margin: 0;
@@ -948,18 +948,31 @@ form p {
       list-style: none; }
       .nav ul li a {
         padding: 0 10px 0 38px; }
-    .nav ul.checkbox-list li {
-      margin-left: 50px; }
-      .nav ul.checkbox-list li.green:before {
-        color: #27ae60; }
-      .nav ul.checkbox-list li.orange:before {
-        color: #e67e22; }
-      .nav ul.checkbox-list li.blue:before {
-        color: #3594ca; }
-      .nav ul.checkbox-list li.red:before {
-        color: #e74c3c; }
-      .nav ul.checkbox-list li.yellow:before {
-        color: #fecd5f; }
+    .nav ul.checkbox-list {
+      line-height: 0;
+      padding: 10px 0; }
+      .nav ul.checkbox-list li {
+        margin-left: 50px; }
+        .nav ul.checkbox-list li.green:before {
+          color: #27ae60; }
+        .nav ul.checkbox-list li.orange:before {
+          color: #e67e22; }
+        .nav ul.checkbox-list li.blue:before {
+          color: #3594ca; }
+        .nav ul.checkbox-list li.red:before {
+          color: #e74c3c; }
+        .nav ul.checkbox-list li.yellow:before {
+          color: #fecd5f; }
+        .nav ul.checkbox-list li.search-ctrl {
+          margin: 15px 10px; }
+          .nav ul.checkbox-list li.search-ctrl .button {
+            float: right;
+            margin: 3px;
+            height: 39px;
+            padding: 0 10px;
+            line-height: 40px; }
+      .nav ul.checkbox-list label {
+        margin: 5px 0; }
 
 .nav-child-container {
   position: absolute;
@@ -1238,7 +1251,7 @@ snap-drawer,
 .snap-drawer,
 .x-snap-drawer,
 .snap-drawer {
-  position: fixed;
+  position: absolute;
   height: auto;
   top: 0;
   bottom: 0;
@@ -1273,7 +1286,8 @@ snap-drawer,
 .snap-drawer-left {
   left: 0;
   z-index: 1;
-  color: #fff; }
+  color: #fff;
+  position: fixed; }
 
 .snap-drawer-right {
   right: 0;
@@ -1344,14 +1358,12 @@ snap-drawer,
     transform: rotate(360deg); } }
 
 .checkbox {
-  margin-bottom: 20px;
-  margin-top: 20px; }
+  /*margin-bottom: 20px;
+  margin-top: 20px;*/ }
 
 label.checkbox {
   padding-left: 0;
-  font-weight: normal;
-  padding-left: 40px;
-  color: #b2b5b5;
+  width: 100%;
   display: inline-block;
     /*span{
         margin-left: 40px;
@@ -1367,24 +1379,26 @@ input[type="checkbox"] + div.regular-checkbox {
   width: 20px;
   height: 20px;
   pointer-events: none;
-  float: right;
-  margin-right: 50px;
+  float: left;
+  margin-right: 10px;
   border: 1px solid rgba(255, 255, 255, 0); }
   input[type="checkbox"] + div.regular-checkbox.dark {
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.05); }
-input[type="checkbox"]:checked + div.regular-checkbox {
-  /*&.blue { background-color: $c_primaryBlue;}
-  &.green { background-color: $c_primaryGreenActive;}
-  &.orange { background-color: $c_primaryOrange;}
-  &.red { background-color: $c_primaryRed;}
-  &.yellow { background-color: $c_primaryYellow;}*/ }
+    color: #fff; }
+input[type="checkbox"]:checked + div.regular-checkbox.blue {
+  color: #3594ca; }
+input[type="checkbox"]:checked + div.regular-checkbox.green {
+  color: #1e8449; }
+input[type="checkbox"]:checked + div.regular-checkbox.orange {
+  color: #e67e22; }
+input[type="checkbox"]:checked + div.regular-checkbox.red {
+  color: #e74c3c; }
+input[type="checkbox"]:checked + div.regular-checkbox.yellow {
+  color: #fecd5f; }
 input[type="checkbox"]:checked + div.regular-checkbox:after {
   pointer-events: none;
   font-family: 'fontello';
-  font-size: 11px;
+  font-size: 14px;
   content: '\e8d5';
-  color: #b2b5b5;
   margin-left: 6px; }
 
 .big-checkbox {

@@ -1,19 +1,18 @@
 
 //todo : fix label vertical alignment for big one;
 .checkbox{
-    margin-bottom: 20px;
-    margin-top: 20px;
+    /*margin-bottom: 20px;
+    margin-top: 20px;*/
 }
 
 label.checkbox{
     padding-left: 0;
-    // width: 100%;
+    width: 100%;
     // color: #999;
-    font-weight: normal;
-    padding-left: 40px;
-    color: darken($c_primaryGrey, 20%);
+    // font-weight: normal;
+    // padding-left: 40px;
+    // color: darken($c_primaryGrey, 20%);
     display: inline-block;
-
     /*span{
         margin-left: 40px;
         opacity: .5;
@@ -30,29 +29,29 @@ input[type="checkbox"]{
         width: 20px;
         height: 20px;
         pointer-events: none;
-        float: right;
-        margin-right: 50px;
+        float: left;
+        margin-right: 10px;
         border: 1px solid rgba(255, 255, 255, 0);
 
         &.dark{
             color:#fff;
-            border: 1px solid rgba(255, 255, 255, .05);
+            // border: 1px solid rgba(255, 255, 255, .05);
         }
     }
     &:checked + div.regular-checkbox {
-        /*&.blue { background-color: $c_primaryBlue;}
-        &.green { background-color: $c_primaryGreenActive;}
-        &.orange { background-color: $c_primaryOrange;}
-        &.red { background-color: $c_primaryRed;}
-        &.yellow { background-color: $c_primaryYellow;}*/
+        &.blue { color: $c_primaryBlue;}
+        &.green { color: $c_primaryGreenActive;}
+        &.orange { color: $c_primaryOrange;}
+        &.red { color: $c_primaryRed;}
+        &.yellow { color: $c_primaryYellow;}
         // background-color: darken($c_primaryGrey, 50%);
     }
     &:checked + div.regular-checkbox:after{
         pointer-events: none;
         font-family: 'fontello';
-        font-size: 11px;
+        font-size: 14px;
         content: '\e8d5';
-        color: darken($c_primaryGrey, 20%);
+        // color: $c_primaryBlue;
         margin-left: 6px;
     }
 
