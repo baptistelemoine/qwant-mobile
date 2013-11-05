@@ -453,8 +453,40 @@ body {
   background-color: #f3f3f3;
   background-image: linear, to bottom, green 0%, green 100%; }
 
-#content {
-  position: relative; }
+.home-container {
+  height: 100%;
+  background: white;
+  position: absolute;
+  width: 100%; }
+
+.input-container {
+  position: relative;
+  border: 1px solid #eee;
+  width: 85%;
+  margin: 0 auto; }
+  .input-container i {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 20px;
+    opacity: .7;
+    cursor: pointer; }
+  .input-container a {
+    color: inherit; }
+
+#homeLogo {
+  margin: 30px 0;
+  background: url("/img/logocouleur@2x.png") no-repeat center center;
+  background-size: 200px 57px;
+  height: 100px; }
+
+.searchbox-container {
+  text-align: center;
+  padding: 10px; }
+  .searchbox-container input {
+    background: white !important;
+    width: 85%;
+    margin-left: -30px !important; }
 
 label.checkbox > * {
   pointer-events: none; }
@@ -919,7 +951,7 @@ form p {
     position: relative;
     margin: 0;
     padding: 0; }
-  .nav a {
+  .nav a:not(.sidebar-search) {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -935,9 +967,9 @@ form p {
     font-size: 14px;
     font-family: "Raleway", sans-serif;
     line-height: 46px; }
-    .nav a:before {
+    .nav a:not(.sidebar-search):before {
       margin-right: 1em; }
-    .nav a.hover, .nav a.current {
+    .nav a:not(.sidebar-search).hover, .nav a:not(.sidebar-search).current {
       background: #3594ca; }
   .nav ul {
     overflow: hidden;
@@ -964,13 +996,25 @@ form p {
         .nav ul.checkbox-list li.yellow:before {
           color: #fecd5f; }
         .nav ul.checkbox-list li.search-ctrl {
-          margin: 15px 10px; }
-          .nav ul.checkbox-list li.search-ctrl .button {
-            float: right;
-            margin: 3px;
-            height: 39px;
-            padding: 0 10px;
-            line-height: 40px; }
+          margin: 15px 20px;
+          position: relative;
+          width: 80%;
+          text-align: center; }
+          .nav ul.checkbox-list li.search-ctrl i {
+            position: absolute;
+            top: 4px;
+            right: 8px;
+            font-size: 16px;
+            opacity: .3;
+            cursor: pointer; }
+          .nav ul.checkbox-list li.search-ctrl a {
+            color: inherit;
+            padding: 0; }
+          .nav ul.checkbox-list li.search-ctrl input {
+            background-color: #282c2f;
+            padding: 5px;
+            border-radius: 9999px;
+            width: 100%; }
       .nav ul.checkbox-list label {
         margin: 5px 0; }
 

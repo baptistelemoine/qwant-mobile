@@ -20,9 +20,48 @@ body{
 	background-image: linear-gradient(to bottom, green 0%, green 100%);
 }
 
-#content{
-	position: relative;
+.home-container{
+	height: 100%;
+	background: white;
+	position: absolute;
+	width: 100%;
 }
+.input-container{
+	position:relative;
+	border: 1px solid #eee;
+	width: 85%;
+	margin : 0 auto;
+	i{
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		font-size: 20px;
+		opacity: .7;
+		cursor: pointer;
+	}
+	a{
+		color:inherit;
+	}
+}
+#homeLogo {
+	margin: 30px 0;
+	background: url("/img/logocouleur@2x.png") no-repeat center center;
+	background-size: 200px 57px;
+	height: 100px;
+}
+
+.searchbox-container{
+	text-align: center;
+	padding: 10px;
+	input{
+		background: white!important;
+		width: 85%;
+		margin-left: -30px!important;
+		// border: 1px solid #eee!important;
+		// width: 85%;
+	}
+}
+
 
 label.checkbox > * { pointer-events:none; }
 
