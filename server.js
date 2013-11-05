@@ -5,6 +5,7 @@ var app = module.exports = express();
 var http = require('http');
 var url = require('url');
 var async = require('async');
+var _ = require('underscore');
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -24,7 +25,7 @@ app.listen(3000);
 var searchRequest = function (request, source, callback){
 	
 	return (function(){
-		
+
 		var uri = url.format({
 			protocol:'http',
 			host:'www.qwant.com',
@@ -38,7 +39,12 @@ var searchRequest = function (request, source, callback){
 				output += data;
 			});
 			res.on('end', function(){
-				callback(null, JSON.parse(output));
+				var result = JSON.parse(output);
+				_.map(result[source], function (value){
+					value.s = source;
+					return value;
+				});
+				callback(null, _.compact(_.pick(result, source)));
 			});
 		});
 
@@ -49,28 +55,28 @@ app.get('/search', function (request, response){
 	
 	response.type('application/json; charset=utf-8');
 
+	var sources = request.query.source.split(',');
+	var requests = [];
+	var req = function (source){
+		return function (cb){
+			searchRequest(request, source, cb);
+		};
+	};
+
+	for (var i = 0; i < sources.length; i++) {
+		requests.push(req(sources[i]));
+	}
+
 	if(request.query.source){
-		searchRequest(request, request.query.source, function (error, data){
-			response.send(data);
+		async.parallel(requests, function (error, data){
+			var d = _.flatten(data);
+			var items = _.shuffle(d);
+			response.send({'items':items});
 		});
 	}
 	else {
 		searchRequest(request, "all", function (error, data){
 			response.send(data);
 		});
-
-		/*async.parallel([
-			function (cb){
-				searchRequest(request, 'web', cb);
-			},
-			function (cb){
-				searchRequest(request, 'news', cb);
-			},
-			function (cb){
-				searchRequest(request, 'social', cb);
-			}
-			], function (err, result){
-				response.send(result);
-		});*/
-	}	
+	}
 });
