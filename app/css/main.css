@@ -984,7 +984,31 @@ form p {
       line-height: 0;
       padding: 10px 0; }
       .nav ul.checkbox-list li {
-        margin-left: 50px; }
+        margin-left: 50px;
+        /*&.search-ctrl{
+        	margin: 15px 20px;
+        	position: relative;
+        	width: 80%;
+        	text-align: center;
+        	i{
+        		position: absolute;
+        		top: 4px;
+        		right: 8px;
+        		font-size: 16px;
+        		opacity: .3;
+        		cursor: pointer;
+        	}
+        	a{
+        		color:inherit;
+        		padding: 0;
+        	}
+        	input{
+        		background-color: darken($c_primaryDark, 5%);
+        		padding: 5px;
+        		border-radius: 9999px;
+        		width: 100%;
+        	}
+        }*/ }
         .nav ul.checkbox-list li.green:before {
           color: #27ae60; }
         .nav ul.checkbox-list li.orange:before {
@@ -996,25 +1020,29 @@ form p {
         .nav ul.checkbox-list li.yellow:before {
           color: #fecd5f; }
         .nav ul.checkbox-list li.search-ctrl {
-          margin: 15px 20px;
-          position: relative;
-          width: 80%;
-          text-align: center; }
-          .nav ul.checkbox-list li.search-ctrl i {
-            position: absolute;
-            top: 4px;
-            right: 8px;
-            font-size: 16px;
-            opacity: .3;
-            cursor: pointer; }
-          .nav ul.checkbox-list li.search-ctrl a {
-            color: inherit;
-            padding: 0; }
-          .nav ul.checkbox-list li.search-ctrl input {
+          margin: 15px 0 10px;
+          padding: 0; }
+          .nav ul.checkbox-list li.search-ctrl .sidebar-input-ctrl {
+            position: relative;
             background-color: #282c2f;
-            padding: 5px;
             border-radius: 9999px;
-            width: 100%; }
+            width: 85%;
+            margin: 0 auto; }
+            .nav ul.checkbox-list li.search-ctrl .sidebar-input-ctrl i {
+              position: absolute;
+              top: 2px;
+              right: 8px;
+              font-size: 16px;
+              opacity: .3;
+              cursor: pointer; }
+            .nav ul.checkbox-list li.search-ctrl .sidebar-input-ctrl a {
+              color: inherit;
+              padding: 0; }
+            .nav ul.checkbox-list li.search-ctrl .sidebar-input-ctrl input {
+              margin-left: 10px;
+              margin-bottom: 3px;
+              padding: 3px;
+              background-color: #282c2f; }
       .nav ul.checkbox-list label {
         margin: 5px 0; }
 

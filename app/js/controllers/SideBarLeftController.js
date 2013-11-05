@@ -7,5 +7,6 @@ app.controllers.controller('SideBarLeftController', ['$scope','$window','snapRem
 		'email':'baptiste.lemoine@gmail.com'
 	}
 
-	$scope.term = $location.$$search.q;
+	$scope.term = $location.$$search.q !== undefined ? $location.$$search.q : 'Rechercher';
+
 }]);
