@@ -9,19 +9,7 @@ app.controllers.controller('SearchController',[
 	SearchManager.nextPage($scope.term);
 
 	$rootScope.isHomePage = false;
-	
-/*	$scope.$on('$routeChangeSuccess', function (event, current, prev) {
-		
-		event.stopPropagation;
-		if(!current.params._id) return;
 
-		snapRemote.getSnapper().then(function (snapper) {
-			if($location.$$search._id) snapper.open('right');
-			snapper.on('close', function (){
-				$route.reloadOnSearch = false;
-				$scope.$apply($location.search(prev.params))
-			});
-		});
-	});	*/
-	
+	snapRemote.close();
+		
 }]);
