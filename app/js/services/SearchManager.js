@@ -9,15 +9,14 @@ app.services.factory('SearchManager', [
 		url:ConfigManager.searchUrl,
 		busy:false,
 		term:'',
-		currentPage:0,
+		currentPage:1,
 		perPage:10,
-		source:'all',
 
 		setSource:function(src){ this.source = src; },
 
 		resetSearch:function(){
 			this.items = [];
-			this.currentPage = 0;
+			this.currentPage = 1;
 		},
 
 		nextPage:function(term){
@@ -29,10 +28,8 @@ app.services.factory('SearchManager', [
 
 			//new search ? reset all
 			if(this.term !== term) this.resetSearch();
-
-			var offset = this.currentPage > 0 ? this.currentPage * this.perPage : 0;
 			
-			$http.get(this.url, {params:{q:term, offset:offset, source:this.source}, cache:true})
+			$http.get(this.url, {params:{q:term, page:this.currentPage, source:this.source, size:this.perPage}, cache:true})
 			.success(function (data){				
 				var dataSource = data.items ? data.items : data[self.source];
 				angular.forEach(dataSource, function (value, key){

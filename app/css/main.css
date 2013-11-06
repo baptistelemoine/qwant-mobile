@@ -568,6 +568,8 @@ label.checkbox > * {
         background-color: #febd2c; }
       .blog article .title .category.media {
         background-color: #e74c3c; }
+      .blog article .title .category.videos {
+        background-color: #e74c3c; }
     .blog article .title .time {
       float: right;
       color: #b4b4b4;
