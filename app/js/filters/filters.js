@@ -35,7 +35,9 @@ app.filters.filter('pricing', function (){
 
 app.filters.filter('source',  function (){
 	return function (input){
-		if(input) return input.concat('toto');
+		var container = $('ul.checkbox-list');
+		var cbs = $('input:checked', container);
+		if(input) return input.concat(cbs.length);
 		return input;
 	}
 });

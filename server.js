@@ -29,7 +29,6 @@ var searchRequest = function (request, source, callback){
 		var perSource = Math.floor(request.query.size / request.query.source.split(',').length);
 		var n = perSource * request.query.page;
 		var startIndex = n % 10;
-
 		var offset = Math.ceil(n / 10)*10;
 
 		if(startIndex !== 0) offset-=10;

@@ -1,7 +1,7 @@
 'use strict';
 
 
-app.controllers.controller('SideBarLeftController', ['$scope','$window','snapRemote', '$location', function ($scope, $window, snapRemote, $location){
+app.controllers.controller('SideBarLeftController', ['$scope','$location', function ($scope,$location){
 	$scope.user = {
 		'name':'Baptiste',
 		'email':'hello@gmail.com'
@@ -13,4 +13,7 @@ app.controllers.controller('SideBarLeftController', ['$scope','$window','snapRem
 		$scope.defaultTerm = $location.$$search.q !== undefined ? $location.$$search.q : 'Rechercher';
 	});
 
+	$scope.cb = {
+		cb1:true
+	};	
 }]);

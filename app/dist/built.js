@@ -1,4 +1,4 @@
-/*! qwant-mobile - v - 2013-11-05 */'use strict';
+/*! qwant-mobile - v - 2013-11-06 */'use strict';
 
 // Declare app level module which depends on filters, and services
 var app = angular.module('qwant', [
@@ -32,7 +32,9 @@ app.controllers.controller('SearchController',[
 	'$scope','SearchManager','$location', 'snapRemote', '$route', '$rootScope', function ($scope, SearchManager, $location, snapRemote, $route, $rootScope){
 
 	$scope.term = $location.search().q;
-	SearchManager.setSource('all');
+	var sources = ['news','web','videos','shopping','social'];
+	// var sources = ['news','videos'];
+	SearchManager.setSource(sources.join(','));
 	$scope.search = SearchManager;
 	SearchManager.nextPage($scope.term);
 
@@ -44,7 +46,7 @@ app.controllers.controller('SearchController',[
 'use strict';
 
 
-app.controllers.controller('SideBarLeftController', ['$scope','$window','snapRemote', '$location', function ($scope, $window, snapRemote, $location){
+app.controllers.controller('SideBarLeftController', ['$scope','$location', function ($scope,$location){
 	$scope.user = {
 		'name':'Baptiste',
 		'email':'hello@gmail.com'
@@ -56,6 +58,9 @@ app.controllers.controller('SideBarLeftController', ['$scope','$window','snapRem
 		$scope.defaultTerm = $location.$$search.q !== undefined ? $location.$$search.q : 'Rechercher';
 	});
 
+	$scope.cb = {
+		cb1:true
+	};	
 }]);
 'use strict';
 
@@ -157,6 +162,15 @@ app.filters.filter('pricing', function (){
 		return input.replace('&euro;', '€');
 	}
 });
+
+app.filters.filter('source',  function (){
+	return function (input){
+		var container = $('ul.checkbox-list');
+		var cbs = $('input:checked', container);
+		if(input) return input.concat(cbs.length);
+		return input;
+	}
+});
 'use strict';
 
 app.services.value('ConfigManager', {
@@ -174,15 +188,14 @@ app.services.factory('SearchManager', [
 		url:ConfigManager.searchUrl,
 		busy:false,
 		term:'',
-		currentPage:0,
+		currentPage:1,
 		perPage:10,
-		source:'all',
 
 		setSource:function(src){ this.source = src; },
 
 		resetSearch:function(){
 			this.items = [];
-			this.currentPage = 0;
+			this.currentPage = 1;
 		},
 
 		nextPage:function(term){
@@ -194,10 +207,8 @@ app.services.factory('SearchManager', [
 
 			//new search ? reset all
 			if(this.term !== term) this.resetSearch();
-
-			var offset = this.currentPage > 0 ? this.currentPage * this.perPage : 0;
 			
-			$http.get(this.url, {params:{q:term, offset:offset, source:this.source}, cache:true})
+			$http.get(this.url, {params:{q:term, page:this.currentPage, source:this.source, size:this.perPage}, cache:true})
 			.success(function (data){				
 				var dataSource = data.items ? data.items : data[self.source];
 				angular.forEach(dataSource, function (value, key){
