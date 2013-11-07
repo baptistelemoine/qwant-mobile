@@ -33,11 +33,8 @@ app.filters.filter('pricing', function (){
 	}
 });
 
-app.filters.filter('source',  function (){
+app.filters.filter('topicsFilter',  ['_', function (_){
 	return function (input){
-		var container = $('ul.checkbox-list');
-		var cbs = $('input:checked', container);
-		if(input) return input.concat(cbs.length);
-		return input;
+		return _.pluck(input, 'value').join(',');
 	}
-});
+}]);

@@ -11,13 +11,7 @@ app.services.factory('SearchManager', [
 		term:'',
 		currentPage:1,
 		perPage:10,
-
-		setSource:function(src){ this.source = src; },
-
-		resetSearch:function(){
-			this.items = [];
-			this.currentPage = 1;
-		},
+		reset:true,
 
 		nextPage:function(term){
 
@@ -25,9 +19,6 @@ app.services.factory('SearchManager', [
 
 			if (this.busy) return;
 			this.busy = true;
-
-			//new search ? reset all
-			if(this.term !== term) this.resetSearch();
 			
 			$http.get(this.url, {params:{q:term, page:this.currentPage, source:this.source, size:this.perPage}, cache:true})
 			.success(function (data){				

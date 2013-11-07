@@ -9,7 +9,8 @@ var app = angular.module('qwant', [
   'qwant.controllers',
   'ngSanitize',
   'infinite-scroll',
-  'snap'
+  'snap',
+  'underscore'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {templateUrl:'partials/home.html', controller:'HomeController'});
