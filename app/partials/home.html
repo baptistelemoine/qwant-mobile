@@ -3,7 +3,7 @@
 		<div id="homeLogo"></div>
 		<div class="input-container">
 			<input type="search" class="searchbox" ng-model="term" placeholder="Rechercher" />
-			<a ng-href="#/search?q={{term}}"><i class="icon-search"></i></a>
+			<a ng-href="#/search?q={{term}}&source={{topics|topicsFilter}}"><i class="icon-search"></i></a>
 		</div>
 	</div>
 </div>
