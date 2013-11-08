@@ -451,7 +451,8 @@ dl {
 /* General Styles */
 body {
   background-color: #f3f3f3;
-  background-image: linear, to bottom, green 0%, green 100%; }
+  background-image: linear, to bottom, green 0%, green 100%;
+  -webkit-font-smoothing: antialiased; }
 
 .home-container {
   height: 100%;
@@ -597,6 +598,25 @@ label.checkbox > * {
     clear: both; }
   .blog article p:first-child {
     margin-top: 0; }
+  .blog article .img-video-thumb {
+    height: 155px;
+    overflow: hidden;
+    position: relative; }
+    .blog article .img-video-thumb img {
+      top: -30px;
+      position: absolute; }
+    .blog article .img-video-thumb .play-button {
+      width: 40px;
+      height: 30px;
+      background-color: #CD332D;
+      position: absolute;
+      left: 43%;
+      top: 40%; }
+      .blog article .img-video-thumb .play-button:before {
+        color: white;
+        font-size: 20px;
+        margin: 5px;
+        margin-left: 10px; }
 .blog .format-quote {
   background: #36a1ce;
   color: #fff; }

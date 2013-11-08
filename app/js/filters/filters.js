@@ -38,3 +38,14 @@ app.filters.filter('topicsFilter',  ['_', function (_){
 		return _.pluck(input, 'value').join(',');
 	}
 }]);
+
+app.filters.filter('hqthumb', function(){
+	return function (input){
+		var fileName = input.substring(input.lastIndexOf('/') + 1, input.length);
+		if(fileName === 'default.jpg') return input.replace('default.jpg', 'hqdefault.jpg');
+		return input;
+	}
+});
+
+
+
