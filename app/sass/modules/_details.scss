@@ -2,7 +2,8 @@
 .details-container{
 	color:white;
 	.wrapper{
-		padding: 20px;
+		padding: 30px;
+		padding-bottom: 10px;
 		h2{
 			font-size: 18px;
 			font-weight: 500;
@@ -12,6 +13,11 @@
 			font-size: 13px;
 			color: white;
 			opacity: .6;
+		}
+		i{
+			color: lighten($c_primaryDark, 20%);
+			font-size: 30px;
+			margin-right: 10px;
 		}
 	}
 

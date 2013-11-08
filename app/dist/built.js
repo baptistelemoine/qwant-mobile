@@ -91,6 +91,7 @@ app.controllers.controller('SearchController',[
 			$scope.isActive = true;
 		});
 		snapper.on('drag', function (event){
+			if($scope.isActive) return;
 			$scope.$apply(function(){$scope.isActive = true;})
 		});
 	});
@@ -230,7 +231,7 @@ app.filters.filter('sce', ['$sce', function ($sce){
 
 app.filters.filter('yturlformat', function (){
 	return function (input){
-		return input.concat('?showinfo=0&controls=0')
+		return input.concat('?showinfo=0')
 	}
 });
 

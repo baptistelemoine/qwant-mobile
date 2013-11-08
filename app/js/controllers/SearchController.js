@@ -35,6 +35,7 @@ app.controllers.controller('SearchController',[
 			$scope.isActive = true;
 		});
 		snapper.on('drag', function (event){
+			if($scope.isActive) return;
 			$scope.$apply(function(){$scope.isActive = true;})
 		});
 	});

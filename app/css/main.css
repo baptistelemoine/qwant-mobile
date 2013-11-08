@@ -451,8 +451,7 @@ dl {
 /* General Styles */
 body {
   background-color: #f3f3f3;
-  background-image: linear, to bottom, green 0%, green 100%;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: subpixel-antialiased; }
 
 .home-container {
   height: 100%;
@@ -1518,7 +1517,8 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
 .details-container {
   color: white; }
   .details-container .wrapper {
-    padding: 20px; }
+    padding: 30px;
+    padding-bottom: 10px; }
     .details-container .wrapper h2 {
       font-size: 18px;
       font-weight: 500;
@@ -1527,6 +1527,10 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
       font-size: 13px;
       color: white;
       opacity: .6; }
+    .details-container .wrapper i {
+      color: #636c74;
+      font-size: 30px;
+      margin-right: 10px; }
 
 /**
 *

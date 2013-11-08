@@ -23,7 +23,7 @@ app.filters.filter('sce', ['$sce', function ($sce){
 
 app.filters.filter('yturlformat', function (){
 	return function (input){
-		return input.concat('?showinfo=0&controls=0')
+		return input.concat('?showinfo=0')
 	}
 });
 

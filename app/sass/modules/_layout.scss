@@ -17,8 +17,7 @@
 
 body{
 	background-color: $c_darkBg;
-	background-image: linear-gradient(to bottom, green 0%, green 100%);
-	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 .home-container{
