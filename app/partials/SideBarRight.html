@@ -4,11 +4,17 @@
 			<h2 ng-bind-html="item.title"></h2>
 			<p class="desc" ng-bind-html="item.desc"></p>
 		</div>
-		<div ng-if="item.type && item.type === 'video'" class="flex-video">
+		<div ng-if="item.type && item.type === 'video'" style="margin-bottom:20px" class="flex-video">
 			<iframe ng-src="{{item.media | yturlformat | sce }}" frameborder="0"></iframe>
 		</div>
-		<div class="wrapper">
+		<div class="wrapper" style="padding-top:0">
 			<a ng-href="{{item.url}}" class="button blue" target="_blank">Visiter le site</a>
+		</div>
+		<div class="wrapper" style="padding-top:10px;">
+			<i class="icon-twitter-circled"></i>
+			<i class="icon-facebook-circled"></i>
+			<i class="icon-gplus-circled"></i>
+			<i class="icon-pinterest-circled"></i>
 		</div>
 	</div>	
 </div>
