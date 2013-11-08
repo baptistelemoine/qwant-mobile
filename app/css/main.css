@@ -254,7 +254,7 @@ input[type="submit"], input[type="reset"], input[type="button"], .button {
   margin: 5px 5px 5px 0;
   text-align: center;
   display: inline-block;
-  padding: 13px 32px;
+  padding: 8px 10px;
   border: none;
   background: #3594ca;
   color: #fff;
@@ -509,13 +509,9 @@ label.checkbox > * {
   background: #f3f3f3;
   -webkit-user-select: none;
   -webkit-user-drag: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  /*	position: fixed;
-  	overflow-y: scroll;
-  	top: 48px;
-  	height: auto;
-  	bottom: 0;
-  	width: 100%;*/ }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  #main-content.active {
+    pointer-events: none; }
 
 .wrapped-content {
   padding: 25px 25px;
@@ -1400,7 +1396,8 @@ snap-drawer,
   right: 0;
   z-index: 1;
   position: fixed;
-  color: #fff; }
+  color: #fff;
+  width: 290px; }
 
 .snapjs-left .snap-drawer-right,
 .snapjs-right .snap-drawer-left {
@@ -1517,6 +1514,19 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
   font-size: 18px;
   left: 11px;
   top: 9px; }
+
+.details-container {
+  color: white; }
+  .details-container .wrapper {
+    padding: 20px; }
+    .details-container .wrapper h2 {
+      font-size: 18px;
+      font-weight: 500;
+      color: white; }
+    .details-container .wrapper p.desc {
+      font-size: 13px;
+      color: white;
+      opacity: .6; }
 
 /**
 *

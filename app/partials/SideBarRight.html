@@ -1,2 +1,14 @@
 <div snap-drawer="right">
+	<div class="details-container">
+		<div class="wrapper">
+			<h2 ng-bind-html="item.title"></h2>
+			<p class="desc" ng-bind-html="item.desc"></p>
+		</div>
+		<div ng-if="item.type && item.type === 'video'" class="flex-video">
+			<iframe ng-src="{{item.media | yturlformat | sce }}" frameborder="0"></iframe>
+		</div>
+		<div class="wrapper">
+			<a ng-href="{{item.url}}" class="button blue" target="_blank">Visiter le site</a>
+		</div>
+	</div>	
 </div>

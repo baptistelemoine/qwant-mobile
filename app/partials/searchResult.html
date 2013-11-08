@@ -1,7 +1,6 @@
-<div id="main-content" class="blog">
-	<div ng-controller="SearchController">
+<div id="main-content" class="blog" ng-class="{true: 'active', false: ''}[isActive]">
 		<div infinite-scroll="search.nextPage(term)" infinite-scroll-disabled="false" infinite-scroll-distance="0" infinite-scroll-immediate-check="false">
-			<div ng-repeat="item in search.items">
+			<div ng-repeat="item in search.items" ng-click="onClick($event, this)">
 				<article ng-if="item.s !== 'social'">
 					<div class="wrapped-content" style="padding-bottom:10px;">
 						<div class="title">
@@ -44,5 +43,4 @@
 		   <span class="spinner"></span>
 		</div>
 		<!-- <p ng-show="search.busy">Loading</p> -->
-	</div>
 </div>
