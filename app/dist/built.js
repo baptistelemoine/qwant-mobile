@@ -1,4 +1,4 @@
-/*! qwant-mobile - v - 2013-11-07 *//*! qwant-mobile - v - 2013-11-07 */(function(u,c,A){'use strict';function w(c,s,g,b,d){return{restrict:"ECA",terminal:!0,priority:400,transclude:"element",compile:function(l,m,y){return function(p,l,m){function k(){h&&(h.$destroy(),h=null);q&&(d.leave(q),q=null)}function x(){var a=c.current&&c.current.locals,e=a&&a.$template;if(e){var r=p.$new();y(r,function(v){k();v.html(e);d.enter(v,null,l);var f=g(v.contents()),n=c.current;h=n.scope=r;q=v;if(n.controller){a.$scope=h;var p=b(n.controller,a);n.controllerAs&&(h[n.controllerAs]=p);
+/*! qwant-mobile - v - 2013-11-08 *//*! qwant-mobile - v - 2013-11-07 */(function(u,c,A){'use strict';function w(c,s,g,b,d){return{restrict:"ECA",terminal:!0,priority:400,transclude:"element",compile:function(l,m,y){return function(p,l,m){function k(){h&&(h.$destroy(),h=null);q&&(d.leave(q),q=null)}function x(){var a=c.current&&c.current.locals,e=a&&a.$template;if(e){var r=p.$new();y(r,function(v){k();v.html(e);d.enter(v,null,l);var f=g(v.contents()),n=c.current;h=n.scope=r;q=v;if(n.controller){a.$scope=h;var p=b(n.controller,a);n.controllerAs&&(h[n.controllerAs]=p);
 v.data("$ngControllerController",p);v.children().data("$ngControllerController",p)}f(h);h.$emit("$viewContentLoaded");h.$eval(t);s()})}else k()}var h,q,t=m.onload||"";p.$on("$routeChangeSuccess",x);x()}}}}u=c.module("ngRoute",["ng"]).provider("$route",function(){function u(b,d){return c.extend(new (c.extend(function(){},{prototype:b})),d)}function s(b,c){var l=c.caseInsensitiveMatch,m={originalPath:b,regexp:b},g=m.keys=[];b=b.replace(/([().])/g,"\\$1").replace(/(\/)?:(\w+)([\?|\*])?/g,function(b,
 c,d,k){b="?"===k?k:null;k="*"===k?k:null;g.push({name:d,optional:!!b});c=c||"";return""+(b?"":c)+"(?:"+(b?c:"")+(k&&"(.+?)"||"([^/]+)")+(b||"")+")"+(b||"")}).replace(/([\/$\*])/g,"\\$1");m.regexp=RegExp("^"+b+"$",l?"i":"");return m}var g={};this.when=function(b,d){g[b]=c.extend({reloadOnSearch:!0},d,b&&s(b,d));if(b){var l="/"==b[b.length-1]?b.substr(0,b.length-1):b+"/";g[l]=c.extend({redirectTo:b},s(l,d))}return this};this.otherwise=function(b){this.when(null,b);return this};this.$get=["$rootScope",
 "$location","$routeParams","$q","$injector","$http","$templateCache","$sce",function(b,d,l,m,s,p,w,z){function k(){var a=x(),e=t.current;if(a&&e&&a.$$route===e.$$route&&c.equals(a.pathParams,e.pathParams)&&!a.reloadOnSearch&&!q)e.params=a.params,c.copy(e.params,l),b.$broadcast("$routeUpdate",e);else if(a||e)q=!1,b.$broadcast("$routeChangeStart",a,e),(t.current=a)&&a.redirectTo&&(c.isString(a.redirectTo)?d.path(h(a.redirectTo,a.params)).search(a.params).replace():d.url(a.redirectTo(a.pathParams,d.path(),
@@ -45,8 +45,14 @@ app.filters = angular.module('qwant.filters', []);
 /*! qwant-mobile - v - 2013-11-07 */"use strict";var app=angular.module("qwant",["ngRoute","qwant.filters","qwant.services","qwant.directives","qwant.controllers","ngSanitize","infinite-scroll","snap","underscore"]).config(["$routeProvider",function(a){a.when("/",{templateUrl:"partials/home.html",controller:"HomeController"}),a.when("/search",{templateUrl:"partials/searchResult.html",controller:"SearchController"}),a.otherwise({redirectTo:"/"})}]);app.services=angular.module("qwant.services",[]),app.controllers=angular.module("qwant.controllers",[]),app.directives=angular.module("qwant.directives",[]),app.filters=angular.module("qwant.filters",[]),app.controllers.controller("HomeController",["$scope","$rootScope",function(a,b){b.isHomePage=!0}]),app.controllers.controller("SearchController",["$scope","SearchManager","$location","snapRemote","$route","$rootScope",function(a,b,c,d,e,f){a.term=c.search().q,a.search=b,a.$on("$locationChangeSuccess",function(){b.currentPage=1,b.items=[]}),b.source=c.$$search.source,b.nextPage(a.term),f.isHomePage=!1,d.close()}]),app.controllers.controller("SideBarLeftController",["$scope","$location","$rootScope","_",function(a,b,c,d){a.user={name:"Baptiste",email:"hello@gmail.com"},a.$on("$locationChangeSuccess",function(){a.term=a.defaultTerm=void 0!==b.$$search.q?b.$$search.q:"Rechercher"}),a.$emit("$locationChangeSuccess"),a.cbs=[{checked:!0,value:"web",text:"Web",color:"green"},{checked:!0,value:"news",text:"Actualités",color:"orange"},{checked:!0,value:"social",text:"Social",color:"blue"},{checked:!0,value:"videos",text:"Medias",color:"red"},{checked:!0,value:"shopping",text:"Shopping",color:"yellow"}],a.onCbChange=function(){c.topics=d.where(a.cbs,{checked:!0})},a.onCbChange()}]),app.controllers.controller("SideBarRightController",["$scope","$window","snapRemote",function(){}]),angular.module("snap").directive("snapDrawers",["$window","snapRemote",function(a,b){return{restrict:"AE",link:function(a){var c=null;b.getSnapper().then(function(a){c=a,c.on("drag",function(){}),c.on("open",function(){})}),a.$on("destroy",function(){c.off("drag"),c.off("open"),c=null})}}}]),app.directives.directive("oldheader",["snapRemote","$window",function(){return{restrict:"AE",templateUrl:"partials/header.html",link:function(){}}}]),app.filters.filter("detailsURL",["$location",function(a){return function(b){return a.$$absUrl.concat("&_id=",b)}}]),app.filters.filter("host",["$location",function(){return function(a){return 0!==a.indexOf("http")?a.split("/")[0]:a.split("/")[2]}}]),app.filters.filter("sce",["$sce",function(a){return function(b){return a.trustAsResourceUrl(b)}}]),app.filters.filter("yturlformat",function(){return function(a){return a.concat("?showinfo=0&controls=0")}}),app.filters.filter("pricing",function(){return function(a){return a.replace("&euro;","€")}}),app.filters.filter("topicsFilter",["_",function(a){return function(b){return a.pluck(b,"value").join(",")}}]),app.services.value("ConfigManager",{searchUrl:"/search"}),app.services.factory("SearchManager",["$http","ConfigManager","$rootScope",function(a,b){return{items:[],url:b.searchUrl,busy:!1,term:"",currentPage:1,perPage:10,reset:!0,nextPage:function(b){var c=this;this.busy||(this.busy=!0,a.get(this.url,{params:{q:b,page:this.currentPage,source:this.source,size:this.perPage},cache:!0}).success(function(a){var d=a.items?a.items:a[c.source];angular.forEach(d,function(a){c.items.push(a)}),c.term=b,c.currentPage++,c.busy=!1}))}}}]),angular.module("underscore",[]).factory("_",function(){return window._});
 'use strict';
 
-app.controllers.controller('HomeController', ['$scope','$rootScope', function ($scope, $rootScope){
+app.controllers.controller('HomeController', ['$scope','$rootScope','snapRemote', function ($scope, $rootScope, snapRemote){
 	$rootScope.isHomePage = true;
+
+	snapRemote.getSnapper().then(function (snapper){
+		snapper.settings({
+			minPosition:-290
+		});
+	});
 }]);
 'use strict';
 
@@ -67,7 +73,35 @@ app.controllers.controller('SearchController',[
 	$rootScope.isHomePage = false;
 
 	snapRemote.close();
-		
+
+	// !!!! REMOVE ON PROD
+	snapRemote.getSnapper().then(function (snapper){
+		snapper.settings({
+			minPosition:-290
+		});
+	});
+
+	$scope.isActive = false;
+
+	snapRemote.getSnapper().then(function (snapper){
+		snapper.on('close', function (event){
+			$scope.$apply(function(){$scope.isActive = false;})
+		});
+		snapper.on('open', function (event){
+			$scope.isActive = true;
+		});
+		snapper.on('drag', function (event){
+			$scope.$apply(function(){$scope.isActive = true;})
+		});
+	});
+	
+	$scope.onClick = function (event, obj){
+
+		$rootScope.$broadcast('onItemClick', obj.item);
+		// $scope.isActive = true;
+
+	};
+
 }]);
 'use strict';
 
@@ -105,9 +139,12 @@ app.controllers.controller('SideBarLeftController', ['$scope','$location', '$roo
 'use strict';
 
 
-app.controllers.controller('SideBarRightController', ['$scope','$window','snapRemote', function ($scope, $window, snapRemote){
+app.controllers.controller('SideBarRightController', ['$scope','$window','snapRemote','$rootScope', function ($scope, $window, snapRemote, $rootScope){
 
-	
+	$rootScope.$on('onItemClick', function (event, item){
+		$scope.item = item;
+		snapRemote.open('right');
+	});
 
 }]);
 'use strict';
@@ -208,6 +245,18 @@ app.filters.filter('topicsFilter',  ['_', function (_){
 		return _.pluck(input, 'value').join(',');
 	}
 }]);
+
+app.filters.filter('hqthumb', function(){
+	return function (input){
+		var fileName = input.substring(input.lastIndexOf('/') + 1, input.length);
+		if(fileName === 'default.jpg') return input.replace('default.jpg', 'hqdefault.jpg');
+		return input;
+	}
+});
+
+
+
+
 'use strict';
 
 app.services.value('ConfigManager', {
