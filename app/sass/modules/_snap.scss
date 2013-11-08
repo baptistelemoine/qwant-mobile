@@ -75,6 +75,9 @@ snap-drawer,
 .snap-drawer-right {
   right: 0;
   z-index: 1;
+  position: fixed;
+  color: #fff;
+
 }
 .snapjs-left .snap-drawer-right,
 .snapjs-right .snap-drawer-left {

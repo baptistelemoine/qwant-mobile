@@ -481,6 +481,19 @@ body {
   background-size: 200px 57px;
   height: 100px; }
 
+.drag-info {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  opacity: .2; }
+  .drag-info i {
+    font-size: 24px; }
+  .drag-info p {
+    text-transform: uppercase;
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: 600; }
+
 .searchbox-container {
   text-align: center;
   padding: 10px; }
@@ -1052,10 +1065,10 @@ form p {
             margin: 0 auto; }
             .nav ul.checkbox-list li.search-ctrl .sidebar-input-ctrl i {
               position: absolute;
-              top: 2px;
+              top: 0;
               right: 8px;
-              font-size: 16px;
-              opacity: .3;
+              font-size: 20px;
+              opacity: .5;
               cursor: pointer; }
             .nav ul.checkbox-list li.search-ctrl .sidebar-input-ctrl a {
               color: inherit;
@@ -1063,7 +1076,7 @@ form p {
             .nav ul.checkbox-list li.search-ctrl .sidebar-input-ctrl input {
               margin-left: 10px;
               margin-bottom: 3px;
-              padding: 3px;
+              padding: 5px;
               background-color: #282c2f; }
       .nav ul.checkbox-list label {
         margin: 5px 0; }
@@ -1385,7 +1398,9 @@ snap-drawer,
 
 .snap-drawer-right {
   right: 0;
-  z-index: 1; }
+  z-index: 1;
+  position: fixed;
+  color: #fff; }
 
 .snapjs-left .snap-drawer-right,
 .snapjs-right .snap-drawer-left {
