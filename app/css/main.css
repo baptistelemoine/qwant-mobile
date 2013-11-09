@@ -549,9 +549,7 @@ label.checkbox > * {
 .blog article {
   background: #fff;
   margin: 20px 15px;
-  padding: 0;
-  overflow: hidden;
-  position: relative; }
+  padding: 0; }
   .blog article .title {
     text-transform: uppercase;
     font-size: 12px;

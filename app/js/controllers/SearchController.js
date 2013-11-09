@@ -34,10 +34,10 @@ app.controllers.controller('SearchController',[
 		snapper.on('open', function (event){
 			$scope.isActive = true;
 		});
-		snapper.on('drag', function (event){
+		/*snapper.on('drag', function (event){
 			if($scope.isActive) return;
 			$scope.$apply(function(){$scope.isActive = true;})
-		});
+		});*/
 	});
 	
 	$scope.onClick = function (event, obj){
