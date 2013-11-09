@@ -153,6 +153,10 @@ label.checkbox > * { pointer-events:none; }
 		-moz-backface-visibility:hidden;
 		-ms-backface-visibility:hidden;
 
+		&.active{
+		    -webkit-animation: scaleAnim .3s;
+		}
+
 		.title{
 			text-transform: uppercase;
 			font-size: 12px;
@@ -569,6 +573,11 @@ form{
 	}
 }
 
+@-webkit-keyframes scaleAnim {
+     0% { -webkit-transform: scale3d(1, 1, 1); }
+     50% { -webkit-transform: scale3d(0.9, 0.9, 0.9); }
+     100% { -webkit-transform: scale3d(1, 1, 1); }
+}
 
 
 /* Animations */

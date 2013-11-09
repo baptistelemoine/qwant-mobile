@@ -38,6 +38,7 @@ app.controllers.controller('SearchController',[
 			return;
 		}
 		$rootScope.$broadcast('onItemClick', obj.item);
+		obj.item.isActive = true;
 
 	};
 

@@ -553,6 +553,8 @@ label.checkbox > * {
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden; }
+  .blog article.active {
+    -webkit-animation: scaleAnim .3s; }
   .blog article .title {
     text-transform: uppercase;
     font-size: 12px;
@@ -856,6 +858,16 @@ form p {
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   transition: all 0.25s; }
+
+@-webkit-keyframes scaleAnim {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1); }
+
+  50% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9); }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1); } }
 
 /* Animations */
 .csstransforms .gallery-container a.hover {
