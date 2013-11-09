@@ -94,7 +94,6 @@ app.controllers.controller('SearchController',[
 			return;
 		}
 		$rootScope.$broadcast('onItemClick', obj.item);
-		// $scope.isActive = true;
 
 	};
 

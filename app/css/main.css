@@ -549,7 +549,7 @@ label.checkbox > * {
 .blog article {
   background: #fff;
   margin: 20px 15px;
-  padding: 0; }
+  -webkit-font-smoothing: antialiased; }
   .blog article .title {
     text-transform: uppercase;
     font-size: 12px;
@@ -1376,11 +1376,11 @@ snap-drawer,
 
 .snap-content {
   z-index: 2;
-    /*-webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-*/
+  height: auto;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   -webkit-overflow-scrolling: touch;
   -moz-overflow-scrolling: touch;
   -o-overflow-scrolling: touch;
