@@ -25,23 +25,18 @@ app.controllers.controller('SearchController',[
 		});
 	});
 
-	$scope.isActive = false;
-
-	snapRemote.getSnapper().then(function (snapper){
-		snapper.on('close', function (event){
-			$scope.$apply(function(){$scope.isActive = false;})
-		});
-		snapper.on('open', function (event){
-			$scope.isActive = true;
-		});
-		/*snapper.on('drag', function (event){
-			if($scope.isActive) return;
-			$scope.$apply(function(){$scope.isActive = true;})
-		});*/
+	var snapper;
+	snapRemote.getSnapper().then(function (snap){
+		snapper = snap;
 	});
 	
 	$scope.onClick = function (event, obj){
-
+		//if snapper is open or snapper translate (drag), return
+		if(snapper && (snapper.state().state === 'right' || snapper.state().state === 'left' || snapper.state().info.translation.absolute !== 0)){
+			event.preventDefault();
+			event.stopPropagation();
+			return;
+		}
 		$rootScope.$broadcast('onItemClick', obj.item);
 		// $scope.isActive = true;
 
