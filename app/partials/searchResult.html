@@ -1,7 +1,7 @@
 <div id="main-content" class="blog">
 		<div infinite-scroll="search.nextPage(term)" infinite-scroll-disabled="false" infinite-scroll-distance="0" infinite-scroll-immediate-check="false">
 			<div ng-repeat="item in search.items" ng-click="onClick($event, this)">
-				<article ng-if="item.s !== 'social'">
+				<article ng-if="item.s !== 'social'" ng-class="{true: 'active', false: ''}[item.isActive]">
 					<div class="wrapped-content" style="padding-bottom:10px;">
 						<div class="title">
 							<span class="category {{item.s}}">{{item.s}}</span>
