@@ -548,8 +548,7 @@ label.checkbox > * {
 
 .blog article {
   background: #fff;
-  margin: 20px 15px;
-  -webkit-font-smoothing: antialiased; }
+  margin: 20px 15px; }
   .blog article .title {
     text-transform: uppercase;
     font-size: 12px;
