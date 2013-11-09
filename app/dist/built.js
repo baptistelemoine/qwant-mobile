@@ -94,6 +94,7 @@ app.controllers.controller('SearchController',[
 			return;
 		}
 		$rootScope.$broadcast('onItemClick', obj.item);
+		obj.item.isActive = true;
 
 	};
 
@@ -134,11 +135,15 @@ app.controllers.controller('SideBarLeftController', ['$scope','$location', '$roo
 'use strict';
 
 
-app.controllers.controller('SideBarRightController', ['$scope','$window','snapRemote','$rootScope', function ($scope, $window, snapRemote, $rootScope){
+app.controllers.controller('SideBarRightController', ['$scope','snapRemote','$rootScope', '$timeout', function ($scope, snapRemote, $rootScope, $timeout){
 
 	$rootScope.$on('onItemClick', function (event, item){
 		$scope.item = item;
-		snapRemote.open('right');
+		$timeout(function(){
+			snapRemote.open('right');
+			$scope.item.isActive = false;
+		}, 500);
+
 	});
 
 }]);
