@@ -1,4 +1,4 @@
-<div id="main-content" class="blog" ng-class="{true: 'active', false: ''}[isActive]">
+<div id="main-content" class="blog">
 		<div infinite-scroll="search.nextPage(term)" infinite-scroll-disabled="false" infinite-scroll-distance="0" infinite-scroll-immediate-check="false">
 			<div ng-repeat="item in search.items" ng-click="onClick($event, this)">
 				<article ng-if="item.s !== 'social'">
