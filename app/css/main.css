@@ -594,13 +594,12 @@ label.checkbox > * {
   .blog article p.desc {
     opacity: .8;
     font-size: 13px;
-    display: -webkit-box;
     margin: 0 auto;
-    -webkit-line-clamp: 5;
+    /*-webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     overflow: hidden;
-    clear: both; }
+    clear: both;*/ }
   .blog article p:first-child {
     margin-top: 0; }
   .blog article .img-video-thumb {
@@ -1380,10 +1379,6 @@ snap-drawer,
   -moz-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
   -moz-overflow-scrolling: touch;
   -o-overflow-scrolling: touch;
