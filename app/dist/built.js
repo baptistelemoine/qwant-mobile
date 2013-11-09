@@ -81,23 +81,18 @@ app.controllers.controller('SearchController',[
 		});
 	});
 
-	$scope.isActive = false;
-
-	snapRemote.getSnapper().then(function (snapper){
-		snapper.on('close', function (event){
-			$scope.$apply(function(){$scope.isActive = false;})
-		});
-		snapper.on('open', function (event){
-			$scope.isActive = true;
-		});
-		/*snapper.on('drag', function (event){
-			if($scope.isActive) return;
-			$scope.$apply(function(){$scope.isActive = true;})
-		});*/
+	var snapper;
+	snapRemote.getSnapper().then(function (snap){
+		snapper = snap;
 	});
 	
 	$scope.onClick = function (event, obj){
-
+		//if snapper is open or snapper translate (drag), return
+		if(snapper && (snapper.state().state === 'right' || snapper.state().state === 'left' || snapper.state().info.translation.absolute !== 0)){
+			event.preventDefault();
+			event.stopPropagation();
+			return;
+		}
 		$rootScope.$broadcast('onItemClick', obj.item);
 		// $scope.isActive = true;
 
@@ -150,7 +145,7 @@ app.controllers.controller('SideBarRightController', ['$scope','$window','snapRe
 }]);
 'use strict';
 
-angular.module('snap').directive('snapDrawers', ['$window', 'snapRemote', function ($window, snapRemote){
+angular.module('snap').directive('snapContent', ['snapRemote', function (snapRemote){
 	
 	return {
 		
@@ -158,9 +153,9 @@ angular.module('snap').directive('snapDrawers', ['$window', 'snapRemote', functi
 		
 		link:function(scope, element, attributes){
 
-			var snapper = null;
+			console.log(element.css('left'));
 
-			snapRemote.getSnapper().then(function (snap){
+			/*snapRemote.getSnapper().then(function (snapper){
 				
 				snapper = snap;
 
@@ -177,7 +172,7 @@ angular.module('snap').directive('snapDrawers', ['$window', 'snapRemote', functi
 				snapper.off('open');
 				snapper = null;
 			});
-		}
+*/		}
 	};
 }]);
 'use strict';
