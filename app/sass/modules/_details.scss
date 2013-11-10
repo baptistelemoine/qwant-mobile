@@ -3,7 +3,7 @@
 	color:white;
 	.wrapper{
 		padding: 30px;
-		padding-bottom: 10px;
+		padding-bottom: 0;
 		h2{
 			font-size: 18px;
 			font-weight: 500;
@@ -19,6 +19,56 @@
 			font-size: 30px;
 			margin-right: 10px;
 		}
+		&.desc{
+			padding-top: 0;
+		}
+	}
+	.title{
+		text-transform: uppercase;
+		font-size: 12px;
+		margin: 0;
+		margin-bottom: 30px;
+		@include clearfix();
+
+		.category{
+			background-color: $c_secondaryColor;
+			color: white;
+			padding: 2px 5px;;
+			font-size: 10px;
+			&.web{ background-color: $c_primaryGreenActive; }
+			&.news{ background-color: $c_primaryOrange; }
+			&.social{ background-color: $c_primaryBlueActive; }
+			&.shopping{ background-color: $c_primaryYellowActive; }
+			&.media{ background-color: $c_primaryRed; }
+			&.videos{ background-color: $c_primaryRed; }
+
+		}
+
+		.time{
+			float: right;
+			color: #b4b4b4;
+			text-transform: none;
+		}
+	}
+	.button{font-size: 13px;}
+
+	.thumb-container{
+		width: 50px;
+		height: 50px;
+		padding: 5px;
+		background-color: white;
+		border-radius:9999px;
+		overflow: hidden;
+		float: left;
+		margin-right: 15px;
+
+		img{width: 50px!important;}
+	}
+
+	.pricing{
+		font-size: 20px;
+		color: white;
+		margin-top: 10px;
 	}
 
 	

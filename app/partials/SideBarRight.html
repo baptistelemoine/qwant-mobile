@@ -1,20 +1,30 @@
 <div snap-drawer="right">
-	<div class="details-container">
+	<div class="details-container" ng-if="item">
 		<div class="wrapper">
+			<div class="title">
+				<span class="category {{item.s}}">{{item.s}}</span>
+				<span class="time">il y a 2 jours</span>
+			</div>
+			<div class="thumb-container" ng-if="(item.type && item.type === 'image') || item.s ==='shopping'">
+				<img class="media-thumb" ng-src="{{item.thumbnail}}">
+			</div>
 			<h2 ng-bind-html="item.title"></h2>
-			<p class="desc" ng-bind-html="item.desc"></p>
 		</div>
-		<div ng-if="item.type && item.type === 'video'" style="margin-bottom:20px" class="flex-video">
+		<div ng-if="item.type && item.type === 'video'" style="margin-bottom:10px; margin-top:15px;" class="flex-video">
 			<iframe ng-src="{{item.media | yturlformat | sce }}" frameborder="0"></iframe>
 		</div>
-		<div class="wrapper" style="padding-top:0">
-			<a ng-href="{{item.url}}" class="button blue" target="_blank">Visiter le site</a>
+		<div class="wrapper desc">
+			<p class="desc" ng-bind-html="item.desc"></p>
 		</div>
-		<div class="wrapper" style="padding-top:10px;">
+		<div class="wrapper" style="padding-top:0">
+			<a ng-href="{{item.url}}" class="button blue" target="_blank">{{item.url_display || item.url | host}}</a>
+			<span ng-if="item.s === 'shopping'" class="pricing">{{item.price | pricing}}</span>
+		</div>
+		<!-- <div class="wrapper" style="padding-top:10px;">
 			<i class="icon-twitter-circled"></i>
 			<i class="icon-facebook-circled"></i>
 			<i class="icon-gplus-circled"></i>
 			<i class="icon-pinterest-circled"></i>
-		</div>
+		</div> -->
 	</div>	
 </div>
