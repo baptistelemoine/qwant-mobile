@@ -215,10 +215,10 @@ app.filters.filter('detailsURL', ['$location', function ($location){
 
 app.filters.filter('host', ['$location', function ($location){
 	return function (input){
-		if(input.indexOf('http') !== 0) return input.split('/')[0];
-		else return input.split('/')[2];
+		if(input.indexOf('http') !== 0) return input.split('/')[0].replace('www.','');
+		else return input.split('/')[2].replace('www.','');
 
-		return input;
+		return input.replace('www.','');
 	}
 }]);
 

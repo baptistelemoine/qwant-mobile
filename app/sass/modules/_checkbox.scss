@@ -44,6 +44,7 @@ input[type="checkbox"]{
         &.orange { color: $c_primaryOrange;}
         &.red { color: $c_primaryRed;}
         &.yellow { color: $c_primaryYellow;}
+        
         // background-color: darken($c_primaryGrey, 50%);
     }
     &:checked + div.regular-checkbox:after{
