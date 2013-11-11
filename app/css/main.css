@@ -508,7 +508,8 @@ label.checkbox > * {
   background: #f3f3f3;
   -webkit-user-select: none;
   -webkit-user-drag: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0); }
   #main-content.active {
     pointer-events: none; }
 
@@ -1445,8 +1446,7 @@ snap-drawer,
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
-  /* Safari and Chrome */
-  -webkit-perspective: 1000; }
+  /* Safari and Chrome */ }
 
 .snap-drawer-left {
   left: 0;
