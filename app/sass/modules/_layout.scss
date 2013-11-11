@@ -98,6 +98,14 @@ label.checkbox > * { pointer-events:none; }
 	padding: 25px 25px;
 	z-index: 2;
 	position: relative;
+
+	&.news{
+		padding-top:0;
+		padding-bottom:20px;
+		hr{
+			margin: 15px 0;
+		}
+	}
 }
 
 .hero{
@@ -153,6 +161,7 @@ label.checkbox > * { pointer-events:none; }
 		-moz-backface-visibility:hidden;
 		-ms-backface-visibility:hidden;
 		-webkit-transform-style: preserve-3d; /* Safari and Chrome */
+		-webkit-transform: scale3d(1, 1, 1);
 
 		&.active{
 		    -webkit-animation: scaleAnim .3s;

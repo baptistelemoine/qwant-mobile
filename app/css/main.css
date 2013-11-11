@@ -516,6 +516,11 @@ label.checkbox > * {
   padding: 25px 25px;
   z-index: 2;
   position: relative; }
+  .wrapped-content.news {
+    padding-top: 0;
+    padding-bottom: 20px; }
+    .wrapped-content.news hr {
+      margin: 15px 0; }
 
 .hero {
   height: 300px;
@@ -554,7 +559,8 @@ label.checkbox > * {
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
-  /* Safari and Chrome */ }
+  /* Safari and Chrome */
+  -webkit-transform: scale3d(1, 1, 1); }
   .blog article.active {
     -webkit-animation: scaleAnim .3s; }
   .blog article .title {
@@ -1388,6 +1394,8 @@ snap-drawer,
   -o-overflow-scrolling: touch;
   overflow-scrolling: touch;
   width: 266px;
+  -webkit-transform-style: preserve-3d;
+  /* Safari and Chrome */
   background: #34393d;
   color: #fff; }
 
@@ -1553,6 +1561,12 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
       margin-right: 10px; }
     .details-container .wrapper.desc {
       padding-top: 0; }
+    .details-container .wrapper .pricing {
+      float: right;
+      font-weight: 600;
+      font-size: 18px;
+      color: white;
+      margin-top: 10px; }
   .details-container .title {
     text-transform: uppercase;
     font-size: 12px;
