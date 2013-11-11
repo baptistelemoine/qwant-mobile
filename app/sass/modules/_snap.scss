@@ -58,6 +58,7 @@ snap-drawer,
   z-index: 2;
   position: relative;
   height: auto;
+  min-height: 700px;
   background-color: $c_darkBg;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
@@ -67,6 +68,12 @@ snap-drawer,
   -moz-overflow-scrolling: touch;
   -o-overflow-scrolling: touch;
   overflow-scrolling: touch;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  -ms-backface-visibility:hidden;
+  -webkit-transform-style: preserve-3d; /* Safari and Chrome */
+
 
 }
 .snap-drawer-left {
