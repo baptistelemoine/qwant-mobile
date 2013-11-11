@@ -554,12 +554,9 @@ label.checkbox > * {
 .blog article {
   background: #fff;
   margin: 20px 15px;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   padding: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   .blog article.active {
     -webkit-animation: scaleAnim .3s;
     -moz-animation: scaleAnim .3s;
