@@ -19,7 +19,7 @@
 							<div class="play-button icon-play"></div>
 						</div>
 					</div>
-					<div class="wrapped-content" ng-if="!item.type" style="padding-top:0;">
+					<div class="wrapped-content news" ng-if="!item.type">
 						<hr>
 						<span class="read-more"><a ng-href="{{item.url}}" target="_blank">{{item.url_display || item.url | host}}</a></span>
 						<span ng-if="item.s === 'shopping'" class="pricing">{{item.price | pricing}}</span>
