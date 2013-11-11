@@ -2,6 +2,11 @@
 <html lang="en" ng-app="qwant">
 <head>
   <meta charset="utf-8">
+  <style>
+      [ng-cloak] {
+        display: none;
+      }
+  </style>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width" />
   <title>Qwant - Mobile</title>
@@ -34,9 +39,9 @@
     </div>
   </div>
   <div snap-content>
-    <header id="header">
+    <header ng-controller="HeaderController" id="header">
       <div id="menu-trigger" snap-toggle="left" class="header-button left icon-menu"></div>
-      <h1><img src="img/logoblanc@2x.png" ng-hide="isHomePage"></h1>
+      <h1><img src="img/logoblanc@2x.png" ng-show="!isHomePage"></h1>
     </header>
       <div ng-view></div>
   </div>
@@ -61,6 +66,7 @@
   <script src="js/controllers/HomeController.js"></script>
   <script src="js/controllers/SidebarLeftController.js"></script>
   <script src="js/controllers/SidebarRightController.js"></script>
+  <script src="js/controllers/HeaderController.js"></script>
   <script src="js/filters/filters.js"></script>
   <script src="js/directives/directives.js"></script>
   <!--<script src="js/directives/angular-snap-custom.js"></script>-->
