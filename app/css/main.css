@@ -564,7 +564,9 @@ label.checkbox > * {
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
-  /* Safari and Chrome */ }
+  /* Safari and Chrome */
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: scale3d(1, 1, 1); }
   .blog article.active {
     -webkit-animation: scaleAnim .3s;
     -moz-animation: scaleAnim .3s;
