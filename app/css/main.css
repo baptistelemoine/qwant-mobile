@@ -559,7 +559,8 @@ label.checkbox > * {
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
-  /* Safari and Chrome */ }
+  /* Safari and Chrome */
+  clear: both; }
   .blog article.active {
     -webkit-animation: scaleAnim .3s;
     -moz-animation: scaleAnim .3s;
@@ -1432,7 +1433,6 @@ snap-drawer,
   z-index: 2;
   position: relative;
   height: auto;
-  min-height: 700px;
   background-color: #f3f3f3;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
