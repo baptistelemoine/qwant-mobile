@@ -162,7 +162,7 @@ label.checkbox > * { pointer-events:none; }
 
 		padding: 0;
 		overflow: hidden;
-		position: relative;
+		// position: relative;
 
 		&.active{
 		    -webkit-animation: scaleAnim .3s;

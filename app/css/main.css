@@ -559,8 +559,7 @@ label.checkbox > * {
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   padding: 0;
-  overflow: hidden;
-  position: relative; }
+  overflow: hidden; }
   .blog article.active {
     -webkit-animation: scaleAnim .3s;
     -moz-animation: scaleAnim .3s;
