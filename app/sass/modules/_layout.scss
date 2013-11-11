@@ -83,7 +83,7 @@ body{
 label.checkbox > * { pointer-events:none; }
 
 #main-content{
-	background: $c_darkBg;
+	// background: $c_darkBg;
 	-webkit-user-select: none;
 	-webkit-user-drag: none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
