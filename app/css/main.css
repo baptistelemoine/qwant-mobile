@@ -560,7 +560,9 @@ label.checkbox > * {
   -ms-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   /* Safari and Chrome */
-  clear: both; }
+  padding: 0;
+  overflow: hidden;
+  position: relative; }
   .blog article.active {
     -webkit-animation: scaleAnim .3s;
     -moz-animation: scaleAnim .3s;
@@ -1397,6 +1399,7 @@ snap-drawers,
   height: 100%;
   top: 0;
   bottom: 0;
+  width: auto;
   left: 0;
   right: 0; }
 
@@ -1431,14 +1434,11 @@ snap-drawer,
 
 .snap-content {
   z-index: 2;
-  position: relative;
-  height: auto;
   background-color: #f3f3f3;
-  /*    -webkit-transform: translate3d(0, 0, 0);
-      -moz-transform: translate3d(0, 0, 0);
-      -o-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-  */
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   -webkit-overflow-scrolling: touch;
   -moz-overflow-scrolling: touch;
   -o-overflow-scrolling: touch;
