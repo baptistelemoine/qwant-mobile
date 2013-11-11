@@ -508,12 +508,7 @@ label.checkbox > * {
   background: #f3f3f3;
   -webkit-user-select: none;
   -webkit-user-drag: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  position: absolute;
-  top: 48px;
-  right: 0;
-  left: 0;
-  -webkit-transform: translate3d(0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
   #main-content.active {
     pointer-events: none; }
 
@@ -1401,7 +1396,6 @@ snap-drawers,
   height: 100%;
   top: 0;
   bottom: 0;
-  width: auto;
   left: 0;
   right: 0; }
 
@@ -1466,9 +1460,6 @@ snap-drawer,
 .snapjs-expand-left .snap-drawer-left,
 .snapjs-expand-right .snap-drawer-right {
   width: 100%; }
-
-.snap-content {
-  background-color: #f3f3f3; }
 
 .spinner-container {
   text-align: center;

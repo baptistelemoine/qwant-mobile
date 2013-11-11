@@ -18,7 +18,7 @@ snap-drawers,
   height: 100%;
   top: 0;
   bottom: 0;
-  width: auto;
+  // width: auto;
   left: 0;
   right: 0;
 
@@ -57,6 +57,7 @@ snap-drawer,
 .snap-content {
   z-index: 2;
   height: auto;
+  // background-color: $c_darkBg;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -o-transform: translate3d(0, 0, 0);
@@ -95,6 +96,6 @@ snap-drawer,
 	// background-color: #232323; 
 }
 .snap-content { 
-	background-color: $c_darkBg; 
+	// background-color: $c_darkBg;
 	// box-shadow: -10px 0 20px rgba(0,0,0,.5);
 }
