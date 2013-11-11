@@ -37,6 +37,7 @@ app.controllers.controller('SearchController',[
 			event.stopPropagation();
 			return;
 		}
+		console.log('clic')
 		$rootScope.$broadcast('onItemClick', obj.item);
 		obj.item.isActive = true;
 
