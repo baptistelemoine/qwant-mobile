@@ -474,12 +474,6 @@ body {
   .input-container a {
     color: inherit; }
 
-#homeLogo {
-  margin: 30px 0;
-  background: url("/img/logocouleur@2x.png") no-repeat center center;
-  background-size: 200px 57px;
-  height: 100px; }
-
 .drag-info {
   width: 100%;
   margin-top: 50px;
@@ -1029,6 +1023,12 @@ form p {
     -webkit-overflow-scrolling: touch; }
 
 /* Sidebar Inner Styles */
+.sidebar-logo {
+  margin: 30px 0;
+  background: url("/img/logogris@2x.png") no-repeat center center;
+  background-size: 266px 76px;
+  height: 100px; }
+
 .nav {
   margin: 0;
   padding: 0;
