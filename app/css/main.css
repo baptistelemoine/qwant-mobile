@@ -508,13 +508,7 @@ label.checkbox > * {
   background: #f3f3f3;
   -webkit-user-select: none;
   -webkit-user-drag: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-  /* Safari and Chrome */ }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
   #main-content.active {
     pointer-events: none; }
 
@@ -1451,7 +1445,15 @@ snap-drawer,
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
-  /* Safari and Chrome */ }
+  /* Safari and Chrome */
+  -webkit-transition: top 0.2s linear;
+  -moz-transition: top 0.2s linear;
+  -o-transition: top 0.2s linear;
+  transition: top 0.2s linear;
+  -webkit-transition: bottom 0.2s linear;
+  -moz-transition: bottom 0.2s linear;
+  -o-transition: bottom 0.2s linear;
+  transition: bottom 0.2s linear; }
 
 .snap-drawer-left {
   left: 0;

@@ -88,11 +88,6 @@ label.checkbox > * { pointer-events:none; }
 	-webkit-user-select: none;
 	-webkit-user-drag: none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	backface-visibility:hidden;
-	-webkit-backface-visibility:hidden;
-	-moz-backface-visibility:hidden;
-	-ms-backface-visibility:hidden;
-	-webkit-transform-style: preserve-3d; /* Safari and Chrome */
 
 	&.active{
 		pointer-events:none;

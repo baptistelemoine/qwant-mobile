@@ -70,6 +70,14 @@ snap-drawer,
   -moz-backface-visibility:hidden;
   -ms-backface-visibility:hidden;
   -webkit-transform-style: preserve-3d; /* Safari and Chrome */
+  -webkit-transition: top 0.2s linear;
+  -moz-transition: top 0.2s linear;
+  -o-transition: top 0.2s linear;
+  transition: top 0.2s linear;
+  -webkit-transition: bottom 0.2s linear;
+  -moz-transition: bottom 0.2s linear;
+  -o-transition: bottom 0.2s linear;
+  transition: bottom 0.2s linear;
 }
 .snap-drawer-left {
   left: 0;
