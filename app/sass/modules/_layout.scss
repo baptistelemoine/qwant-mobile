@@ -164,6 +164,9 @@ label.checkbox > * { pointer-events:none; }
 
 		&.active{
 		    -webkit-animation: scaleAnim .3s;
+		    -moz-animation: scaleAnim .3s;
+		    -o-animation: scaleAnim .3s;
+		    animation: scaleAnim .3s;
 		}
 
 		.title{
