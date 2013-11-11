@@ -876,6 +876,36 @@ form p {
   100% {
     -webkit-transform: scale3d(1, 1, 1); } }
 
+@-moz-keyframes scaleAnim {
+  0% {
+    -moz-transform: scale3d(1, 1, 1); }
+
+  50% {
+    -moz-transform: scale3d(0.9, 0.9, 0.9); }
+
+  100% {
+    -moz-transform: scale3d(1, 1, 1); } }
+
+@-o-keyframes scaleAnim {
+  0% {
+    -o-transform: scale3d(1, 1, 1); }
+
+  50% {
+    -o-transform: scale3d(0.9, 0.9, 0.9); }
+
+  100% {
+    -o-transform: scale3d(1, 1, 1); } }
+
+@keyframes scaleAnim {
+  0% {
+    transform: scale3d(1, 1, 1); }
+
+  50% {
+    transform: scale3d(0.9, 0.9, 0.9); }
+
+  100% {
+    transform: scale3d(1, 1, 1); } }
+
 /* Animations */
 .csstransforms .gallery-container a.hover {
   -webkit-transform: scale(0.95, 0.95);
@@ -1399,10 +1429,10 @@ snap-drawer,
 .snap-content {
   z-index: 2;
   height: auto;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  /* -webkit-transform: translate3d(0, 0, 0);
+   -moz-transform: translate3d(0, 0, 0);
+   -o-transform: translate3d(0, 0, 0);
+   transform: translate3d(0, 0, 0);*/
   -webkit-overflow-scrolling: touch;
   -moz-overflow-scrolling: touch;
   -o-overflow-scrolling: touch;
