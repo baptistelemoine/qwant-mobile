@@ -161,7 +161,6 @@ label.checkbox > * { pointer-events:none; }
 		-moz-backface-visibility:hidden;
 		-ms-backface-visibility:hidden;
 		-webkit-transform-style: preserve-3d; /* Safari and Chrome */
-		-webkit-transform: scale3d(1, 1, 1);
 
 		&.active{
 		    -webkit-animation: scaleAnim .3s;

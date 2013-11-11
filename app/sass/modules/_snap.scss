@@ -50,7 +50,7 @@ snap-drawer,
   -o-overflow-scrolling: touch;
   overflow-scrolling: touch;
   width: 266px;
-  -webkit-transform-style: preserve-3d; /* Safari and Chrome */
+
   // height: 100%;
   background: $c_menuBg;
   color: #fff;
@@ -66,6 +66,10 @@ snap-drawer,
   -moz-overflow-scrolling: touch;
   -o-overflow-scrolling: touch;
   overflow-scrolling: touch;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  -ms-backface-visibility:hidden;
   -webkit-transform-style: preserve-3d; /* Safari and Chrome */
 }
 .snap-drawer-left {
