@@ -643,7 +643,14 @@ label.checkbox > * {
         margin-left: 10px; }
 .blog .format-quote {
   background: #36a1ce;
-  color: #fff; }
+  color: #fff;
+  -webkit-transform-style: preserve-3d;
+  /* Safari and Chrome */ }
+  .blog .format-quote.active {
+    -webkit-animation: scaleAnim .3s;
+    -moz-animation: scaleAnim .3s;
+    -o-animation: scaleAnim .3s;
+    animation: scaleAnim .3s; }
   .blog .format-quote .article-profile-photo {
     float: left; }
   .blog .format-quote img {

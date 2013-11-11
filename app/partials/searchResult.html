@@ -25,7 +25,7 @@
 						<span ng-if="item.s === 'shopping'" class="pricing">{{item.price | pricing}}</span>
 					</div>
 				</article>
-				<article ng-if="item.s === 'social'" class="format-quote">
+				<article ng-if="item.s === 'social'" class="format-quote" ng-class="{true: 'active', false: ''}[item.isActive]">
 					<div class="wrapped-content">
 						<div class="profile-container">
 							<div class="article-profile-photo">
