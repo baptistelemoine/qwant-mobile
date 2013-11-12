@@ -24,11 +24,6 @@ app.directives = angular.module('qwant.directives', []);
 app.filters = angular.module('qwant.filters', []);
 'use strict';
 
-app.controllers.controller('HeaderController', ['$scope','$rootScope', function ($scope, $rootScope){
-	$rootScope.isHomePage = true;
-}]);
-'use strict';
-
 app.controllers.controller('HomeController', ['$scope','$rootScope','snapRemote', function ($scope, $rootScope, snapRemote){
 	$rootScope.isHomePage = true;
 
