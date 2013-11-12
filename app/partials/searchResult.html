@@ -33,7 +33,7 @@
 							</div>
 							<div class="article-profile"><p>{{item.title}}</p><p class="time">il y a 2 minutes</p></div>
 						</div>
-						<blockquote class="icon-twitter" ng-bind-html="item.desc"></blockquote>
+						<blockquote class="icon-{{item.type}}" ng-bind-html="item.desc|ellipsis"></blockquote>
 					</div>
 				</article>
 			</div>

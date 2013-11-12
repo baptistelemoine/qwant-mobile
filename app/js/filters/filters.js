@@ -39,6 +39,12 @@ app.filters.filter('topicsFilter',  ['_', function (_){
 	}
 }]);
 
+app.filters.filter('ellipsis', function (){
+	return function (input){
+		return input.length > 140 ? input.substring(0, 140) + '[...]' : input;
+	}
+});
+
 app.filters.filter('hqthumb', function(){
 	return function (input){
 		var fileName = input.substring(input.lastIndexOf('/') + 1, input.length);

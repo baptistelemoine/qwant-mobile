@@ -18,7 +18,7 @@ app.controllers.controller('SearchController',[
 
 	snapRemote.close();
 
-	// !!!! REMOVE ON PROD
+	// snapper settings, for direct search url
 	snapRemote.getSnapper().then(function (snapper){
 		snapper.settings({
 			minPosition:-290
