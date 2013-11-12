@@ -5,3 +5,4 @@ logs/*
 *.sublime-workspace
 app/lib/vendor
 node_modules
+.sass-cache
