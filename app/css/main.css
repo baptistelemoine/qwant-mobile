@@ -484,14 +484,13 @@ body {
   width: 100%;
   margin-top: 50px;
   text-align: center;
-  opacity: .2; }
+  opacity: .4; }
   .drag-info i {
     font-size: 24px; }
   .drag-info p {
-    text-transform: uppercase;
     margin-top: 0;
-    font-size: 12px;
-    font-weight: 600; }
+    font-size: 14px;
+    margin-left: 5px; }
 
 .searchbox-container {
   text-align: center;
