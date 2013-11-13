@@ -7,13 +7,6 @@ app.controllers.controller('SideBarLeftController', ['$scope','$location', '$roo
 		'email':'hello@gmail.com'
 	}
 
-	$scope.$on('$locationChangeSuccess', function (e){
-		$scope.term = $scope.defaultTerm = $location.$$search.q !== undefined ? $location.$$search.q : 'Rechercher';
-	});
-
-	//default value
-	$scope.$emit('$locationChangeSuccess');
-
 	//checkbox list
 	$scope.cbs = [
 		{checked:true,value:'web',text:'Web',color:'green'},
@@ -22,6 +15,13 @@ app.controllers.controller('SideBarLeftController', ['$scope','$location', '$roo
 		{checked:true,value:'videos',text:'Medias',color:'red'},
 		{checked:true,value:'shopping',text:'Shopping',color:'yellow'}
 	];
+
+	$scope.$on('$locationChangeSuccess', function (e){
+		$scope.term = $scope.defaultTerm = $location.$$search.q !== undefined ? $location.$$search.q : 'Rechercher';		
+	});
+
+	//default value
+	$scope.$emit('$locationChangeSuccess');
 
 	//change btn submit url
 	$scope.onCbChange = function(){

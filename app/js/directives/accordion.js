@@ -1,6 +1,6 @@
 'use strict';
 
-app.directives.directive('accordion',['$animate', function ($animate){
+app.directives.directive('accordion', function (){
 	return {
 		'restrict':'A',
 		link:function(scope, element, attr){
@@ -8,19 +8,24 @@ app.directives.directive('accordion',['$animate', function ($animate){
 			var list = angular.element(element).find('ul:first-child');
 			var items = angular.element(list).find('>li');
 
-			element.bind('click', function (e){
+			angular.element(list).find('li.current').find('>ul').addClass('active');
 
-				var current = angular.element(e.target).parent();
-				if(current.hasClass('current')) return;
-				angular.forEach(items, function (value, key){
-					angular.element(value).removeClass('current');
-					angular.element(value).find('>ul').removeClass('active');
+			angular.forEach(items, function (value, key){
+				
+				var el = angular.element(value);				
+				el.on('click', function (e){
+					if(el.hasClass('current')) return;
+					e.preventDefault();
+					angular.forEach(items, function (value, key){
+						angular.element(value).removeClass('current');
+						angular.element(value).find('>ul').removeClass('active');
+					});
+					el.addClass('current');
+					angular.element(el).find('>ul').addClass('active');
 				});
-				current.addClass('current');
-				angular.element(current).find('>ul').addClass('active');
 			});
 
 		}
 
 	};
-}]);
+});
