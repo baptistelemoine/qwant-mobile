@@ -97,7 +97,8 @@ app.controllers.controller('SideBarLeftController', ['$scope','$location', '$roo
 	];
 
 	$scope.$on('$locationChangeSuccess', function (e){
-		$scope.term = $scope.defaultTerm = $location.$$search.q !== undefined ? $location.$$search.q : 'Rechercher';		
+		$scope.term = $scope.defaultTerm = $location.$$search.q !== undefined ? $location.$$search.q : 'Rechercher';
+		$scope.currentURL = '#' + $location.$$url;
 	});
 
 	//default value
