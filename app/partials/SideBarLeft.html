@@ -9,10 +9,10 @@
 				<p class="subtitle">{{user.email}}</p>
 			</div>
 		</div>
-		<nav id="nav-container">
+		<nav id="nav-container" accordion>
 			<ul class="nav">
-				<li class="current"><a class="current icon-search-1" href="#">Recherche</a>
-					<ul class="active checkbox-list">
+				<li class="current"><a class="icon-search-1" href="#">Recherche</a>
+					<ul class="checkbox-list">
 						<label class="checkbox" ng-repeat="cb in cbs">
 							<li>							
 								<input type="checkbox" ng-model="cb.checked" ng-change="onCbChange()" /> 
