@@ -1049,6 +1049,8 @@ form p {
     position: relative;
     margin: 0;
     padding: 0; }
+    .nav li.current a {
+      background: #2589c5; }
   .nav a:not(.sidebar-search) {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -1081,8 +1083,12 @@ form p {
         padding: 0 10px 0 38px; }
     .nav ul.checkbox-list {
       line-height: 0;
-      padding: 10px 0;
+      padding: 0;
+      -webkit-transform: scale(1, 0);
       font-size: 16px; }
+      .nav ul.checkbox-list.active {
+        padding: 10px 0;
+        -webkit-transform: scale(1, 1); }
       .nav ul.checkbox-list li {
         margin-left: 50px;
         /*&.search-ctrl{

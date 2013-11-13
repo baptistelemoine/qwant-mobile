@@ -74,6 +74,10 @@
 		position: relative;
 		margin: 0;
 		padding: 0;
+
+		&.current a {
+			background: $c_primaryBlue;
+		}
 	}
 
 	a{
@@ -117,8 +121,15 @@
 		}
 
 		&.checkbox-list{
+
+			&.active{
+				padding: 10px 0;
+				-webkit-transform: scale(1, 1);
+			}
 			line-height: 0;
-			padding: 10px 0;
+			// padding: 10px 0;
+			padding: 0;
+			-webkit-transform: scale(1, 0);
 			font-size: 16px;
 
 			li{
