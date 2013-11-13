@@ -1,6 +1,6 @@
 'use strict';
 
-app.directives.directive('accordion', function(){
+app.directives.directive('accordion',['$animate', function ($animate){
 	return {
 		'restrict':'A',
 		link:function(scope, element, attr){
@@ -23,4 +23,4 @@ app.directives.directive('accordion', function(){
 		}
 
 	};
-});
+}]);
