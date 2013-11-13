@@ -1,4 +1,4 @@
-/*! qwant-mobile - v - 2013-11-12 */'use strict';
+/*! qwant-mobile - v - 2013-11-13 */'use strict';
 
 // Declare app level module which depends on filters, and services
 var app = angular.module('qwant', [
@@ -87,13 +87,6 @@ app.controllers.controller('SideBarLeftController', ['$scope','$location', '$roo
 		'email':'hello@gmail.com'
 	}
 
-	$scope.$on('$locationChangeSuccess', function (e){
-		$scope.term = $scope.defaultTerm = $location.$$search.q !== undefined ? $location.$$search.q : 'Rechercher';
-	});
-
-	//default value
-	$scope.$emit('$locationChangeSuccess');
-
 	//checkbox list
 	$scope.cbs = [
 		{checked:true,value:'web',text:'Web',color:'green'},
@@ -102,6 +95,13 @@ app.controllers.controller('SideBarLeftController', ['$scope','$location', '$roo
 		{checked:true,value:'videos',text:'Medias',color:'red'},
 		{checked:true,value:'shopping',text:'Shopping',color:'yellow'}
 	];
+
+	$scope.$on('$locationChangeSuccess', function (e){
+		$scope.term = $scope.defaultTerm = $location.$$search.q !== undefined ? $location.$$search.q : 'Rechercher';		
+	});
+
+	//default value
+	$scope.$emit('$locationChangeSuccess');
 
 	//change btn submit url
 	$scope.onCbChange = function(){
@@ -128,62 +128,35 @@ app.controllers.controller('SideBarRightController', ['$scope','snapRemote','$ro
 }]);
 'use strict';
 
-angular.module('snap').directive('snapContent', ['snapRemote', function (snapRemote){
-	
+app.directives.directive('accordion', function (){
 	return {
-		
-		restrict:'AE',
-		
-		link:function(scope, element, attributes){
+		'restrict':'A',
+		link:function(scope, element, attr){
 
-			console.log(element.css('left'));
+			var list = angular.element(element).find('ul:first-child');
+			var items = angular.element(list).find('>li');
 
-			/*snapRemote.getSnapper().then(function (snapper){
+			angular.element(list).find('li.current').find('>ul').addClass('active');
+
+			angular.forEach(items, function (value, key){
 				
-				snapper = snap;
-
-				snapper.on('drag', function (){
-					// element.css('top', $window.document.documentElement.scrollTop||$window.document.body.scrollTop);
-				});
-				snapper.on('open', function (){
-					// element.css('top', $window.document.documentElement.scrollTop||$window.document.body.scrollTop);
+				var el = angular.element(value);				
+				el.on('click', function (e){
+					if(el.hasClass('current')) return;
+					e.preventDefault();
+					angular.forEach(items, function (value, key){
+						angular.element(value).removeClass('current');
+						angular.element(value).find('>ul').removeClass('active');
+					});
+					el.addClass('current');
+					angular.element(el).find('>ul').addClass('active');
 				});
 			});
 
-			scope.$on('destroy', function(){
-				snapper.off('drag');
-				snapper.off('open');
-				snapper = null;
-			});
-*/		}
+		}
+
 	};
-}]);
-'use strict';
-
-
-app.directives.directive('oldheader', ['snapRemote', '$window', function (snapRemote, $window){
-	
-	return {
-		
-		restrict:'AE',
-		
-		templateUrl:'partials/header.html',
-
-		link:function(scope, element, attributes){
-			
-			/*snapRemote.getSnapper().then(function (snapper){
-				
-				snapper.on('drag', function (){
-					var currentValue = $('.snap-content').offset().left;
-					var prop = 'translate3d(' + currentValue + 'px, 0,0)';
-					// element.attr('style', '-webkit-transform:'+prop);
-					// console.log(currentValue);
-				});
-
-			});
-*/		}
-	}
-}]);
+});
 'use strict';
 
 app.filters.filter('detailsURL', ['$location', function ($location){
