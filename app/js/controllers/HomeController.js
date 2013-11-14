@@ -7,5 +7,6 @@ app.controllers.controller('HomeController', ['$scope','$rootScope','snapRemote'
 		snapper.settings({
 			minPosition:-290
 		});
+		snapper.close();
 	});
 }]);

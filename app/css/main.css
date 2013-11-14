@@ -1686,6 +1686,69 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
         opacity: .5;
         font-size: 12px; }
 
+.img-container {
+  height: 200px;
+  background-color: grey;
+  position: relative;
+  overflow: hidden; }
+  .img-container img.img-bg {
+    width: 100%;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+    margin-top: -5px; }
+  .img-container .user-info {
+    position: absolute;
+    bottom: 0;
+    height: 90px;
+    background-color: rgba(40, 44, 47, 0.7);
+    width: 100%; }
+    .img-container .user-info .user-profile-photo {
+      width: 60px;
+      height: 60px;
+      float: left;
+      border: 2px solid #fff;
+      border-radius: 9999px;
+      margin: -10px 20px; }
+      .img-container .user-info .user-profile-photo img {
+        width: 60px;
+        height: 60px;
+        border-radius: 9999px; }
+    .img-container .user-info .item-details {
+      margin: 8px 20px; }
+    .img-container .user-info .item-container {
+      width: 50px;
+      text-align: center;
+      float: left;
+      padding: 0 5px 0 5px; }
+      .img-container .user-info .item-container:not(:last-child) {
+        border-right: 1px solid rgba(255, 255, 255, 0.5); }
+      .img-container .user-info .item-container p {
+        margin: 0;
+        color: white;
+        line-height: 1.2;
+        font-size: 12px; }
+        .img-container .user-info .item-container p.item-title {
+          line-height: 1.2;
+          opacity: .8;
+          margin-bottom: 2px; }
+    .img-container .user-info .user-profile-content {
+      margin-top: 10px;
+      padding-left: 75px; }
+      .img-container .user-info .user-profile-content p.title {
+        margin: 0;
+        color: #fff;
+        font-weight: 500;
+        font-size: 18px;
+        font-family: "Raleway", sans-serif;
+        line-height: 1.2; }
+      .img-container .user-info .user-profile-content p.subtitle {
+        line-height: 1.2;
+        margin: 0;
+        font-size: 11px; }
+
 /**
 *
 * Imports

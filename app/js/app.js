@@ -15,6 +15,7 @@ var app = angular.module('qwant', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {templateUrl:'partials/home.html', controller:'HomeController'});
   $routeProvider.when('/search', {templateUrl: 'partials/searchResult.html', controller: 'SearchController'});
+  $routeProvider.when('/user/:user', {templateUrl: 'partials/userDetails.html', controller: 'UserDetailsController'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
 
