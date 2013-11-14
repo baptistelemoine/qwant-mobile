@@ -22,8 +22,10 @@
 						</label>
 						<li class="search-ctrl">
 							<div class="sidebar-input-ctrl">
-								<input type="text" ng-model="term" placeholder="{{defaultTerm}}">
-								<a class="sidebar-search" ng-href="#/search?q={{term}}&source={{topics|topicsFilter}}"><i class="icon-search"></i></a>
+								<form action="#/search?q={{term}}&source={{topics|topicsFilter}}">
+									<input type="text" ng-model="term" placeholder="{{defaultTerm}}">
+									<a class="sidebar-search" ng-href="#/search?q={{term}}&source={{topics|topicsFilter}}"><i class="icon-search"></i></a>
+								</form>
 							</div>
 						</li>
 					</ul>					

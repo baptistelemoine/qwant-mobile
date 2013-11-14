@@ -2,12 +2,13 @@
 	<div class="searchbox-container">
 		<div id="homeLogo"></div>
 		<div class="input-container">
-			<input type="search" class="searchbox" ng-model="term" placeholder="Rechercher" />
-			<a ng-href="#/search?q={{term}}&source={{topics|topicsFilter}}"><i class="icon-search"></i></a>
+			<form action="#/search?q={{term}}&source={{topics|topicsFilter}}">
+				<input type="search" class="searchbox" ng-model="term" placeholder="Rechercher" />
+				<a ng-href="#/search?q={{term}}&source={{topics|topicsFilter}}"><i class="icon-search"></i></a>
+			</form>
 		</div>
 	</div>
 	<div class="drag-info">
-		<!-- <i class="icon-switch"></i> -->
 		<img src="img/hand2.png" width="30px" height="48px">
 		<p>Drag me</p>
 	</div>	

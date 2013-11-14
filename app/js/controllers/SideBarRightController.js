@@ -8,7 +8,7 @@ app.controllers.controller('SideBarRightController', ['$scope','snapRemote','$ro
 		$timeout(function(){
 			snapRemote.open('right');
 			$scope.item.isActive = false;
-		}, 500);
+		}, 600);
 
 	});
 
