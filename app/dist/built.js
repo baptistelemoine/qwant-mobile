@@ -1,4 +1,4 @@
-/*! qwant-mobile - v - 2013-11-13 */'use strict';
+/*! qwant-mobile - v - 2013-11-14 */'use strict';
 
 // Declare app level module which depends on filters, and services
 var app = angular.module('qwant', [
@@ -122,7 +122,7 @@ app.controllers.controller('SideBarRightController', ['$scope','snapRemote','$ro
 		$timeout(function(){
 			snapRemote.open('right');
 			$scope.item.isActive = false;
-		}, 500);
+		}, 600);
 
 	});
 
