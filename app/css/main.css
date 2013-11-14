@@ -1088,12 +1088,10 @@ form p {
       line-height: 0;
       padding: 0;
       height: 0;
-      -webkit-transform: scale(0.8, 0.8);
       font-size: 16px; }
       .nav ul.checkbox-list.active {
         padding: 10px 0;
-        height: 268px;
-        -webkit-transform: scale(1, 1); }
+        height: 248px; }
       .nav ul.checkbox-list li {
         margin-left: 50px;
         /*&.search-ctrl{
@@ -1216,6 +1214,10 @@ form p {
       font-size: 12px;
       font-family: "Raleway", sans-serif;
       line-height: 1.3; }
+    #author-profile .author-profile-content i {
+      float: right;
+      margin-top: 10px;
+      opacity: .5; }
 
 /**
 *
