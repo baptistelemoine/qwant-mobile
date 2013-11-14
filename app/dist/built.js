@@ -15,6 +15,7 @@ var app = angular.module('qwant', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {templateUrl:'partials/home.html', controller:'HomeController'});
   $routeProvider.when('/search', {templateUrl: 'partials/searchResult.html', controller: 'SearchController'});
+  $routeProvider.when('/user/:user', {templateUrl: 'partials/userDetails.html', controller: 'UserDetailsController'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
 
@@ -31,6 +32,7 @@ app.controllers.controller('HomeController', ['$scope','$rootScope','snapRemote'
 		snapper.settings({
 			minPosition:-290
 		});
+		snapper.close();
 	});
 }]);
 'use strict';
@@ -126,6 +128,18 @@ app.controllers.controller('SideBarRightController', ['$scope','snapRemote','$ro
 
 	});
 
+}]);
+'use strict';
+
+app.controllers.controller('UserDetailsController', ['$scope', '$route', '$rootScope', 'snapRemote', function ($scope, $route, $rootScope, snapRemote){
+	
+	snapRemote.getSnapper().then(function (snapper){ snapper.close();})
+
+	var currentUser = $route.current.params.user;
+	$rootScope.isHomePage = false;
+	var user = {
+
+	}
 }]);
 'use strict';
 
