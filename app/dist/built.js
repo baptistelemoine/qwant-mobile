@@ -1,4 +1,4 @@
-/*! qwant-mobile - v - 2013-11-14 */'use strict';
+/*! qwant-mobile - v - 2013-11-15 */'use strict';
 
 // Declare app level module which depends on filters, and services
 var app = angular.module('qwant', [
@@ -26,6 +26,7 @@ app.filters = angular.module('qwant.filters', []);
 'use strict';
 
 app.controllers.controller('HomeController', ['$scope','$rootScope','snapRemote', function ($scope, $rootScope, snapRemote){
+	
 	$rootScope.isHomePage = true;
 
 	snapRemote.getSnapper().then(function (snapper){
@@ -33,6 +34,13 @@ app.controllers.controller('HomeController', ['$scope','$rootScope','snapRemote'
 			minPosition:-290
 		});
 		snapper.close();
+		//disable drag me button when drag first init
+		snapper.on('drag', function (e){
+			$scope.$apply(function (){
+				$scope.userHasDragged = true;
+				snapper.off('drag');
+			});
+		});
 	});
 }]);
 'use strict';
