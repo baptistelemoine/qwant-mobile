@@ -182,6 +182,16 @@ app.directives.directive('accordion', function (){
 });
 'use strict';
 
+app.directives.directive('shareArea', function (){
+	return {
+		'restrict':'AE',
+		link:function (scope, element, attr){
+
+		}
+	}
+})
+'use strict';
+
 app.filters.filter('detailsURL', ['$location', function ($location){
 	return function (input) {
 		return $location.$$absUrl.concat('&_id=', input);
