@@ -1483,7 +1483,8 @@ snap-drawer,
   z-index: 1;
   position: fixed;
   color: #fff;
-  width: 290px; }
+  width: 290px;
+  overflow-x: hidden; }
 
 .snapjs-left .snap-drawer-right,
 .snapjs-right .snap-drawer-left {
@@ -1599,7 +1600,8 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
   top: 9px; }
 
 .details-container {
-  color: white; }
+  color: white;
+  -webkit-transform-style: preserve-3d; }
   .details-container .wrapper {
     padding: 30px;
     padding-bottom: 0; }
@@ -1620,6 +1622,7 @@ input[type="checkbox"]:checked + div.regular-checkbox:after {
       color: white; }
     .details-container .wrapper.share-area {
       width: 200%;
+      min-height: 100px;
       -webkit-transform: translate3d(0, 0, 0);
       -moz-transform: translate3d(0, 0, 0);
       -ms-transform: translate3d(0, 0, 0);
