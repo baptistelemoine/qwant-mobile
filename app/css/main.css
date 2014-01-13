@@ -1442,7 +1442,8 @@ snap-drawer,
   height: auto;
   top: 0;
   bottom: 0;
-  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
   -webkit-transition: top 0.2s linear;
   -moz-transition: top 0.2s linear;
   -o-transition: top 0.2s linear;
@@ -1461,6 +1462,7 @@ snap-drawer,
 
 .snap-content {
   z-index: 2;
+  overflow-y: scroll;
   background-color: #f3f3f3;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -1483,8 +1485,7 @@ snap-drawer,
   z-index: 1;
   position: fixed;
   color: #fff;
-  width: 290px;
-  overflow-x: hidden; }
+  width: 290px; }
 
 .snapjs-left .snap-drawer-right,
 .snapjs-right .snap-drawer-left {
