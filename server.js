@@ -36,8 +36,10 @@ var searchRequest = function (request, source, callback){
 		var uri = url.format({
 			protocol:'http',
 			host:'www.qwant.com',
-			pathname:['search', 'fr_FR'].join('/'),
-			query:{'q':request.query.q, 'source':source, 'offset':offset}
+			// pathname:['search', 'fr_FR'].join('/'),
+			pathname:['search', source].join('/'),
+			// query:{'q':request.query.q, 'source':source, 'offset':offset}
+			query:{'q':request.query.q, 'offset':offset}
 		});
 		console.log(uri)
 		http.get(uri, function (res){
