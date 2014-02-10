@@ -39,7 +39,7 @@ var searchRequest = function (request, source, callback){
 			pathname:['search', source].join('/'),
 			query:{'q':request.query.q, 'offset':offset}
 		});
-		console.log(uri)
+		// console.log(uri)
 		http.get(uri, function (res){
 			var output = '';
 			res.on('data', function (data){
@@ -50,7 +50,7 @@ var searchRequest = function (request, source, callback){
 				if(source === 'all') return callback(null, JSON.parse(output));
 				
 				var result = JSON.parse(output);
-				result[source] = result[source].slice(startIndex, perSource+startIndex);
+				result[source] = result.result.items.slice(startIndex, perSource+startIndex);
 				_.map(result[source], function (value){
 					value.s = source;
 					return value;
