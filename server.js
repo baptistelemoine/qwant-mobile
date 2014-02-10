@@ -52,7 +52,7 @@ var searchRequest = function (request, source, callback){
 				if(source === 'all') return callback(null, JSON.parse(output));
 				
 				var result = JSON.parse(output);
-				result[source] = result[source].slice(startIndex, perSource+startIndex);
+				result[source] = result.result.items.slice(startIndex, perSource+startIndex);
 				_.map(result[source], function (value){
 					value.s = source;
 					return value;
